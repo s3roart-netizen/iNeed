@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iNeed - Support</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            color: #333;
+        }
+
+        .page {
+            display: none;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .active {
+            display: flex;
+        }
+
+        /* Mitte der Startseite */
+        .main-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .logo {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .support-mail {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer Links */
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: gray;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Text-Layout für Info-Seiten */
+        .info-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            white-space: pre-line; /* Behält Zeilenumbrüche bei */
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #007BFF;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="home" class="page active">
+        <div class="main-content">
+            <div>
+                <img src="https://i.imgur.com/pMGxMsr.png" alt="Logo" class="logo">
+                <p>Brauchst du Hilfe?</p>
+                <p>Kontaktiere <a href="mailto:serhat02@live.de" class="support-mail">serhat02@live.de</a></p>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-links">
+                <a onclick="showPage('privacy')">Datenschutz</a>
+                <a onclick="showPage('terms')">Nutzungsbedingungen</a>
+            </div>
+        </footer>
+    </div>
+
+    <div id="privacy" class="page">
+        <div class="info-container">
+            <a onclick="showPage('home')" class="back-btn">← Zurück</a>
+            <div>Willkommen bei iNeed. Der Schutz deiner Daten ist uns besonders wichtig.
+Diese App sammelt und speichert nur die absolut notwendigen Informationen, um ihre Funktionen zu ermöglichen.
+
+Welche Daten werden gespeichert?
+
+Die App speichert ausschließlich:
+
+• Name (für dein Nutzerprofil)
+• Wiederherstellungs-E-Mail (falls du dein Profil verlierst)
+• Standortdaten im Zusammenhang mit Anzeigen (zur Darstellung auf der Karte)
+• Profilbild (falls du eines hochlädst)
+• Erstellte Anzeigen (Titel, Beschreibung, Bilder, Kategorie, gewählter Standort)
+• Chats mit anderen Nutzern
+
+Wo werden deine Daten gespeichert?
+
+Aktuell werden die Daten innerhalb der App verarbeitet.
+Für die Kommunikation zwischen Nutzern und die Anzeige von Inhalten kann eine Online-Übertragung über einen eigenen Backend-Server erforderlich sein.
+
+Das bedeutet:
+
+• Deine Daten werden nicht verkauft
+• Deine Daten werden nicht an Dritte weitergegeben
+• Es werden keine Tracking- oder Analyse-Tools eingesetzt
+• Es findet keine Weitergabe zu Werbezwecken statt
+
+Wofür werden die Daten benötigt?
+
+Die Daten werden ausschließlich für folgende Zwecke verwendet:
+
+• Darstellung deines Profils
+• Anzeige von Anzeigen auf der Karte und in Listen
+• Kommunikation mit anderen Nutzern (Chats)
+• Wiederherstellung deines Profils über deine E-Mail
+• Sicherheit und Missbrauchsvermeidung (z. B. zur Prüfung gemeldeter Inhalte)
+
+Standortdaten
+
+Dein Standort wird nur im Zusammenhang mit einer Anzeige verwendet, um diese auf der Karte darzustellen.
+
+• Es erfolgt keine dauerhafte Standortverfolgung
+• Dein Standort wird nicht im Hintergrund erfasst
+• Du kannst statt deines aktuellen Standorts auch einen beliebigen Ort auswählen
+
+Welche Rechte hast du?
+
+Du kannst jederzeit:
+
+• Dein Profil ändern
+• Dein Profil vollständig löschen
+• Anzeigen entfernen
+• Alle App-Daten durch Löschen der App entfernen
+
+Bei der Profil-Löschung werden alle zugehörigen Daten unwiderruflich gelöscht, einschließlich:
+
+• Profilinformationen
+• Chats
+• Anzeigen
+• Bewertungspunkte (Needs & Sterne)
+
+Kontakt
+
+Wenn du Fehler melden möchtest, findest du die Funktion unter
+Mehr → Fehler melden</div>
+        </div>
+    </div>
+
+    <div id="terms" class="page">
+        <div class="info-container">
+            <a onclick="showPage('home')" class="back-btn">← Zurück</a>
+            <div>Diese App dient ausschließlich dem privaten Austausch von Gegenständen zwischen Nutzern.
+
+## 1. Verantwortung
+Du bist selbst vollständig verantwortlich für:
+
+• deine Angebote  
+• deine Kommunikation  
+• deine Übergaben  
+• eventuelle Schäden oder Streitigkeiten  
+
+Der App-Betreiber übernimmt **keine Haftung**.
+
+---
+
+## 2. Sicherheit
+Bitte triff bei Treffen mit Nutzern grundlegende Sicherheitsvorkehrungen wie:
+
+• öffentliche Orte wählen  
+• Personen informieren  
+• keine sensiblen Daten weitergeben  
+
+---
+
+## 3. Inhalte
+Verboten sind u.a.:
+
+• illegale Gegenstände  
+• gefährliche Produkte  
+• beleidigende oder diskriminierende Inhalte  
+• Spam & Fake-Profile  
+
+---
+
+## 4. Daten
+Alle Daten werden **nur lokal auf deinem Gerät gespeichert**.
+
+---
+
+## 5. Profil löschen
+Du kannst dein Profil jederzeit in der App löschen.
+
+Vielen Dank, dass du iNeed nutzt!</div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById(pageId).classList.add('active');
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
