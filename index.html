@@ -66,7 +66,7 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 40px 20px;
-            white-space: pre-line; /* Behält Zeilenumbrüche bei */
+            white-space: pre-line;
         }
 
         .back-btn {
@@ -81,10 +81,16 @@
         h2 {
             margin-top: 30px;
         }
+        
+        ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
     </style>
 </head>
 <body>
 
+    <!-- STARTSEITE -->
     <div id="home" class="page active">
         <div class="main-content">
             <div>
@@ -95,136 +101,163 @@
         </div>
         <footer>
             <div class="footer-links">
-                <a onclick="showPage('privacy')">Datenschutz</a>
-                <a onclick="showPage('terms')">Nutzungsbedingungen</a>
+                <!-- Echte Links mit href -->
+                <a href="#privacy">Datenschutz</a>
+                <a href="#terms">Nutzungsbedingungen</a>
             </div>
         </footer>
     </div>
 
+    <!-- DATENSCHUTZ -->
     <div id="privacy" class="page">
         <div class="info-container">
-            <a onclick="showPage('home')" class="back-btn">← Zurück</a>
-            <div>Willkommen bei iNeed. Der Schutz deiner Daten ist uns besonders wichtig.
-Diese App sammelt und speichert nur die absolut notwendigen Informationen, um ihre Funktionen zu ermöglichen.
+            <a href="#home" class="back-btn">← Zurück</a>
+            <div>
+                <p>Willkommen bei iNeed. Der Schutz deiner Daten ist uns besonders wichtig.
+Diese App sammelt und speichert nur die absolut notwendigen Informationen, um ihre Funktionen zu ermöglichen.</p>
 
-Welche Daten werden gespeichert?
+                <h2>Welche Daten werden gespeichert?</h2>
+                <p>Die App speichert ausschließlich:</p>
+                <ul>
+                    <li>Name (für dein Nutzerprofil)</li>
+                    <li>Wiederherstellungs-E-Mail (falls du dein Profil verlierst)</li>
+                    <li>Standortdaten im Zusammenhang mit Anzeigen (zur Darstellung auf der Karte)</li>
+                    <li>Profilbild (falls du eines hochlädst)</li>
+                    <li>Erstellte Anzeigen (Titel, Beschreibung, Bilder, Kategorie, gewählter Standort)</li>
+                    <li>Chats mit anderen Nutzern</li>
+                </ul>
 
-Die App speichert ausschließlich:
+                <h2>Wo werden deine Daten gespeichert?</h2>
+                <p>Aktuell werden die Daten innerhalb der App verarbeitet.
+Für die Kommunikation zwischen Nutzern und die Anzeige von Inhalten kann eine Online-Übertragung über einen eigenen Backend-Server erforderlich sein.</p>
 
-• Name (für dein Nutzerprofil)
-• Wiederherstellungs-E-Mail (falls du dein Profil verlierst)
-• Standortdaten im Zusammenhang mit Anzeigen (zur Darstellung auf der Karte)
-• Profilbild (falls du eines hochlädst)
-• Erstellte Anzeigen (Titel, Beschreibung, Bilder, Kategorie, gewählter Standort)
-• Chats mit anderen Nutzern
+                <p>Das bedeutet:</p>
+                <ul>
+                    <li>Deine Daten werden nicht verkauft</li>
+                    <li>Deine Daten werden nicht an Dritte weitergegeben</li>
+                    <li>Es werden keine Tracking- oder Analyse-Tools eingesetzt</li>
+                    <li>Es findet keine Weitergabe zu Werbezwecken statt</li>
+                </ul>
 
-Wo werden deine Daten gespeichert?
+                <h2>Wofür werden die Daten benötigt?</h2>
+                <p>Die Daten werden ausschließlich für folgende Zwecke verwendet:</p>
+                <ul>
+                    <li>Darstellung deines Profils</li>
+                    <li>Anzeige von Anzeigen auf der Karte und in Listen</li>
+                    <li>Kommunikation mit anderen Nutzern (Chats)</li>
+                    <li>Wiederherstellung du dein Profils über deine E-Mail</li>
+                    <li>Sicherheit und Missbrauchsvermeidung (z. B. zur Prüfung gemeldeter Inhalte)</li>
+                </ul>
 
-Aktuell werden die Daten innerhalb der App verarbeitet.
-Für die Kommunikation zwischen Nutzern und die Anzeige von Inhalten kann eine Online-Übertragung über einen eigenen Backend-Server erforderlich sein.
+                <h2>Standortdaten</h2>
+                <p>Dein Standort wird nur im Zusammenhang mit einer Anzeige verwendet, um diese auf der Karte darzustellen.</p>
+                <ul>
+                    <li>Es erfolgt keine dauerhafte Standortverfolgung</li>
+                    <li>Dein Standort wird nicht im Hintergrund erfasst</li>
+                    <li>Du kannst statt deines aktuellen Standorts auch einen beliebigen Ort auswählen</li>
+                </ul>
 
-Das bedeutet:
+                <h2>Welche Rechte hast du?</h2>
+                <p>Du kannst jederzeit:</p>
+                <ul>
+                    <li>Dein Profil ändern</li>
+                    <li>Dein Profil vollständig löschen</li>
+                    <li>Anzeigen entfernen</li>
+                    <li>Alle App-Daten durch Löschen der App entfernen</li>
+                </ul>
 
-• Deine Daten werden nicht verkauft
-• Deine Daten werden nicht an Dritte weitergegeben
-• Es werden keine Tracking- oder Analyse-Tools eingesetzt
-• Es findet keine Weitergabe zu Werbezwecken statt
+                <p>Bei der Profil-Löschung werden alle zugehörigen Daten unwiderruflich gelöscht, einschließlich:</p>
+                <ul>
+                    <li>Profilinformationen</li>
+                    <li>Chats</li>
+                    <li>Anzeigen</li>
+                    <li>Bewertungspunkte (Needs & Sterne)</li>
+                </ul>
 
-Wofür werden die Daten benötigt?
-
-Die Daten werden ausschließlich für folgende Zwecke verwendet:
-
-• Darstellung deines Profils
-• Anzeige von Anzeigen auf der Karte und in Listen
-• Kommunikation mit anderen Nutzern (Chats)
-• Wiederherstellung deines Profils über deine E-Mail
-• Sicherheit und Missbrauchsvermeidung (z. B. zur Prüfung gemeldeter Inhalte)
-
-Standortdaten
-
-Dein Standort wird nur im Zusammenhang mit einer Anzeige verwendet, um diese auf der Karte darzustellen.
-
-• Es erfolgt keine dauerhafte Standortverfolgung
-• Dein Standort wird nicht im Hintergrund erfasst
-• Du kannst statt deines aktuellen Standorts auch einen beliebigen Ort auswählen
-
-Welche Rechte hast du?
-
-Du kannst jederzeit:
-
-• Dein Profil ändern
-• Dein Profil vollständig löschen
-• Anzeigen entfernen
-• Alle App-Daten durch Löschen der App entfernen
-
-Bei der Profil-Löschung werden alle zugehörigen Daten unwiderruflich gelöscht, einschließlich:
-
-• Profilinformationen
-• Chats
-• Anzeigen
-• Bewertungspunkte (Needs & Sterne)
-
-Kontakt
-
-Wenn du Fehler melden möchtest, findest du die Funktion unter
-Mehr → Fehler melden</div>
+                <h2>Kontakt</h2>
+                <p>Wenn du Fehler melden möchtest, findest du die Funktion unter
+Mehr → Fehler melden</p>
+            </div>
         </div>
     </div>
 
+    <!-- NUTZUNGSBEDINGUNGEN -->
     <div id="terms" class="page">
         <div class="info-container">
-            <a onclick="showPage('home')" class="back-btn">← Zurück</a>
-            <div>Diese App dient ausschließlich dem privaten Austausch von Gegenständen zwischen Nutzern.
+            <a href="#home" class="back-btn">← Zurück</a>
+            <div>
+                <p>Diese App dient ausschließlich dem privaten Austausch von Gegenständen zwischen Nutzern.</p>
 
-## 1. Verantwortung
-Du bist selbst vollständig verantwortlich für:
+                <h2>1. Verantwortung</h2>
+                <p>Du bist selbst vollständig verantwortlich für:</p>
+                <ul>
+                    <li>deine Angebote</li>
+                    <li>deine Kommunikation</li>
+                    <li>deine Übergaben</li>
+                    <li>eventuelle Schäden oder Streitigkeiten</li>
+                </ul>
+                <p>Der App-Betreiber übernimmt <strong>keine Haftung</strong>.</p>
 
-• deine Angebote  
-• deine Kommunikation  
-• deine Übergaben  
-• eventuelle Schäden oder Streitigkeiten  
+                <hr>
 
-Der App-Betreiber übernimmt **keine Haftung**.
+                <h2>2. Sicherheit</h2>
+                <p>Bitte triff bei Treffen mit Nutzern grundlegende Sicherheitsvorkehrungen wie:</p>
+                <ul>
+                    <li>öffentliche Orte wählen</li>
+                    <li>Personen informieren</li>
+                    <li>keine sensiblen Daten weitergeben</li>
+                </ul>
 
----
+                <hr>
 
-## 2. Sicherheit
-Bitte triff bei Treffen mit Nutzern grundlegende Sicherheitsvorkehrungen wie:
+                <h2>3. Inhalte</h2>
+                <p>Verboten sind u.a.:</p>
+                <ul>
+                    <li>illegale Gegenstände</li>
+                    <li>gefährliche Produkte</li>
+                    <li>beleidigende oder diskriminierende Inhalte</li>
+                    <li>Spam & Fake-Profile</li>
+                </ul>
 
-• öffentliche Orte wählen  
-• Personen informieren  
-• keine sensiblen Daten weitergeben  
+                <hr>
 
----
+                <h2>4. Daten</h2>
+                <p>Alle Daten werden <strong>nur lokal auf deinem Gerät gespeichert</strong>.</p>
 
-## 3. Inhalte
-Verboten sind u.a.:
+                <hr>
 
-• illegale Gegenstände  
-• gefährliche Produkte  
-• beleidigende oder diskriminierende Inhalte  
-• Spam & Fake-Profile  
+                <h2>5. Profil löschen</h2>
+                <p>Du kannst dein Profil jederzeit in der App löschen.</p>
 
----
-
-## 4. Daten
-Alle Daten werden **nur lokal auf deinem Gerät gespeichert**.
-
----
-
-## 5. Profil löschen
-Du kannst dein Profil jederzeit in der App löschen.
-
-Vielen Dank, dass du iNeed nutzt!</div>
+                <p>Vielen Dank, dass du iNeed nutzt!</p>
+            </div>
         </div>
     </div>
 
     <script>
-        function showPage(pageId) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(pageId).classList.add('active');
-            window.scrollTo(0, 0);
+        // Funktion, die Seiten basierend auf dem URL-Hash umschaltet
+        function handleRouting() {
+            // Hole den aktuellen Hash (z.B. "#privacy") oder Standard "#home"
+            let hash = window.location.hash || '#home';
+            let pageId = hash.replace('#', '');
+            
+            // Prüfe, ob die ID überhaupt existiert
+            let targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                // Alle Seiten ausblenden
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                // Gewünschte Seite einblenden
+                targetPage.classList.add('active');
+                // Nach oben scrollen
+                window.scrollTo(0, 0);
+            }
         }
+
+        // Reagiere auf Änderungen der URL (z.B. wenn jemand den Zurück-Button klickt)
+        window.addEventListener('hashchange', handleRouting);
+
+        // Führe die Funktion direkt beim ersten Laden der Webseite aus
+        window.addEventListener('DOMContentLoaded', handleRouting);
     </script>
 </body>
 </html>
