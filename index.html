@@ -1,263 +1,270 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iNeed - Support</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-            background-color: #ffffff;
-            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-            color: #333;
-        }
-
-        .page {
-            display: none;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        .active {
-            display: flex;
-        }
-
-        /* Mitte der Startseite */
-        .main-content {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-
-        .logo {
-            max-width: 300px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        .support-mail {
-            color: #007BFF;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        /* Footer Links */
-        footer {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .footer-links a {
-            color: gray;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        /* Text-Layout für Info-Seiten */
-        .info-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            white-space: pre-line;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #007BFF;
-            text-decoration: none;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        h2 {
-            margin-top: 30px;
-        }
-        
-        ul {
-            padding-left: 20px;
-            margin: 10px 0;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iNeed</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700;800&family=EB+Garamond:wght@300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --color-bg: #f3f2f2;
+    --color-text: #201e1d;
+    --color-accent: #ec3013;
+    --color-neutral-500: #9b9797;
+    --color-neutral-700: #605d5d;
+    --font-heading: "Archivo", system-ui, sans-serif;
+    --font-body: "Archivo", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; width: 100%; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); }
+  a { color: var(--color-accent); }
+  a:hover { color: #ae1800; }
+  .page { display: none; flex-direction: column; min-height: 100vh; }
+  .active { display: flex; }
+  main.home { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; padding: 0 24px 64px; position: relative; }
+  .logo { position: absolute; top: 24px; left: 24px; max-width: 110px; width: 100%; height: auto; display: block; }
+  .slogan-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 60px; }
+  .slogan { font-family: 'EB Garamond', var(--font-body); font-weight: 300; font-size: clamp(40px, 7vw, 84px); line-height: 1.15; max-width: 900px; margin: 0; color: var(--color-text); }
+  .info-container { max-width: 760px; margin: 0 auto; padding: 48px 24px; width: 100%; white-space: pre-line; }
+  .back-btn { display: inline-block; margin-bottom: 28px; font-family: var(--font-heading); font-weight: 700; text-decoration: none; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text); }
+  h1 { font-family: var(--font-heading); font-size: 28px; margin: 0 0 24px; border-bottom: 2px solid rgba(32,30,29,0.4); padding-bottom: 16px; white-space: normal; }
+  .info-body { font-size: 15px; line-height: 1.7; color: #444141; }
+  footer { padding: 16px 24px; text-align: center; }
+  .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .footer-contact { margin: 0; font-size: 11px; color: var(--color-neutral-700); }
+  .footer-contact a { font-weight: 600; text-decoration: none; color: var(--color-neutral-700); }
+  .footer-links { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .footer-links a { color: var(--color-neutral-500); text-decoration: none; font-size: 11px; }
+</style>
 </head>
 <body>
 
-    <!-- STARTSEITE -->
-    <div id="home" class="page active">
-        <div class="main-content">
-            <div>
-                <img src="https://i.imgur.com/pMGxMsr.png" alt="Logo" class="logo">
-                <p>Brauchst du Hilfe?</p>
-                <p>Kontaktiere <a href="mailto:serhat02@live.de" class="support-mail">serhat02@live.de</a></p>
-            </div>
+  <div id="home" class="page active">
+    <main class="home">
+      <img src="https://i.imgur.com/pMGxMsr.png" alt="iNeed Logo" class="logo">
+      <div class="slogan-wrap">
+        <p class="slogan">If you hate Capitalism, then you will love this.</p>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-inner">
+        <p class="footer-contact"><span data-t="contact">Contact</span> <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+        <div class="footer-links">
+          <a href="#privacy" data-t="privacyTitle">Privacy Policy</a>
+          <a href="#terms" data-t="termsTitle">Terms of Use</a>
         </div>
-        <footer>
-            <div class="footer-links">
-                <!-- Echte Links mit href -->
-                <a href="#privacy">Datenschutz</a>
-                <a href="#terms">Nutzungsbedingungen</a>
-            </div>
-        </footer>
+      </div>
+    </footer>
+  </div>
+
+  <div id="privacy" class="page">
+    <div class="info-container">
+      <a href="#home" class="back-btn" data-t="back">← Back</a>
+      <h1 data-t="privacyTitle">Privacy Policy</h1>
+      <div class="info-body" data-t="privacyBody"></div>
     </div>
+  </div>
 
-    <!-- DATENSCHUTZ -->
-    <div id="privacy" class="page">
-        <div class="info-container">
-            <a href="#home" class="back-btn">← Zurück</a>
-            <div>
-                <p>Willkommen bei iNeed. Der Schutz deiner Daten ist uns besonders wichtig.
-Diese App sammelt und speichert nur die absolut notwendigen Informationen, um ihre Funktionen zu ermöglichen.</p>
-
-                <h2>Welche Daten werden gespeichert?</h2>
-                <p>Die App speichert ausschließlich:</p>
-                <ul>
-                    <li>Name (für dein Nutzerprofil)</li>
-                    <li>Wiederherstellungs-E-Mail (falls du dein Profil verlierst)</li>
-                    <li>Standortdaten im Zusammenhang mit Anzeigen (zur Darstellung auf der Karte)</li>
-                    <li>Profilbild (falls du eines hochlädst)</li>
-                    <li>Erstellte Anzeigen (Titel, Beschreibung, Bilder, Kategorie, gewählter Standort)</li>
-                    <li>Chats mit anderen Nutzern</li>
-                </ul>
-
-                <h2>Wo werden deine Daten gespeichert?</h2>
-                <p>Aktuell werden die Daten innerhalb der App verarbeitet.
-Für die Kommunikation zwischen Nutzern und die Anzeige von Inhalten kann eine Online-Übertragung über einen eigenen Backend-Server erforderlich sein.</p>
-
-                <p>Das bedeutet:</p>
-                <ul>
-                    <li>Deine Daten werden nicht verkauft</li>
-                    <li>Deine Daten werden nicht an Dritte weitergegeben</li>
-                    <li>Es werden keine Tracking- oder Analyse-Tools eingesetzt</li>
-                    <li>Es findet keine Weitergabe zu Werbezwecken statt</li>
-                </ul>
-
-                <h2>Wofür werden die Daten benötigt?</h2>
-                <p>Die Daten werden ausschließlich für folgende Zwecke verwendet:</p>
-                <ul>
-                    <li>Darstellung deines Profils</li>
-                    <li>Anzeige von Anzeigen auf der Karte und in Listen</li>
-                    <li>Kommunikation mit anderen Nutzern (Chats)</li>
-                    <li>Wiederherstellung du dein Profils über deine E-Mail</li>
-                    <li>Sicherheit und Missbrauchsvermeidung (z. B. zur Prüfung gemeldeter Inhalte)</li>
-                </ul>
-
-                <h2>Standortdaten</h2>
-                <p>Dein Standort wird nur im Zusammenhang mit einer Anzeige verwendet, um diese auf der Karte darzustellen.</p>
-                <ul>
-                    <li>Es erfolgt keine dauerhafte Standortverfolgung</li>
-                    <li>Dein Standort wird nicht im Hintergrund erfasst</li>
-                    <li>Du kannst statt deines aktuellen Standorts auch einen beliebigen Ort auswählen</li>
-                </ul>
-
-                <h2>Welche Rechte hast du?</h2>
-                <p>Du kannst jederzeit:</p>
-                <ul>
-                    <li>Dein Profil ändern</li>
-                    <li>Dein Profil vollständig löschen</li>
-                    <li>Anzeigen entfernen</li>
-                    <li>Alle App-Daten durch Löschen der App entfernen</li>
-                </ul>
-
-                <p>Bei der Profil-Löschung werden alle zugehörigen Daten unwiderruflich gelöscht, einschließlich:</p>
-                <ul>
-                    <li>Profilinformationen</li>
-                    <li>Chats</li>
-                    <li>Anzeigen</li>
-                    <li>Bewertungspunkte (Needs & Sterne)</li>
-                </ul>
-
-                <h2>Kontakt</h2>
-                <p>Wenn du Fehler melden möchtest, findest du die Funktion unter
-Mehr → Fehler melden</p>
-            </div>
-        </div>
+  <div id="terms" class="page">
+    <div class="info-container">
+      <a href="#home" class="back-btn" data-t="back">← Back</a>
+      <h1 data-t="termsTitle">Terms of Use</h1>
+      <div class="info-body" data-t="termsBody"></div>
     </div>
+  </div>
 
-    <!-- NUTZUNGSBEDINGUNGEN -->
-    <div id="terms" class="page">
-        <div class="info-container">
-            <a href="#home" class="back-btn">← Zurück</a>
-            <div>
-                <p>Diese App dient ausschließlich dem privaten Austausch von Gegenständen zwischen Nutzern.</p>
+  <script>
+    const TRANSLATIONS = {
+      de: {
+        back: '← Zurück',
+        contact: 'Kontakt',
+        privacyTitle: 'Datenschutz',
+        termsTitle: 'Nutzungsbedingungen',
+        privacyBody: `Willkommen bei iNeed. Der Schutz deiner Daten ist uns besonders wichtig. Diese App sammelt und speichert nur die absolut notwendigen Informationen, um ihre Funktionen zu ermöglichen.
 
-                <h2>1. Verantwortung</h2>
-                <p>Du bist selbst vollständig verantwortlich für:</p>
-                <ul>
-                    <li>deine Angebote</li>
-                    <li>deine Kommunikation</li>
-                    <li>deine Übergaben</li>
-                    <li>eventuelle Schäden oder Streitigkeiten</li>
-                </ul>
-                <p>Der App-Betreiber übernimmt <strong>keine Haftung</strong>.</p>
+Welche Daten werden gespeichert?
+Die App speichert ausschließlich:
+– Name (für dein Nutzerprofil)
+– Wiederherstellungs-E-Mail (falls du dein Profil verlierst)
+– Standortdaten im Zusammenhang mit Anzeigen (zur Darstellung auf der Karte)
+– Profilbild (falls du eines hochlädst)
+– Erstellte Anzeigen (Titel, Beschreibung, Bilder, Kategorie, gewählter Standort)
+– Chats mit anderen Nutzern
 
-                <hr>
+Wo werden deine Daten gespeichert?
+Aktuell werden die Daten innerhalb der App verarbeitet. Für die Kommunikation zwischen Nutzern und die Anzeige von Inhalten kann eine Online-Übertragung über einen eigenen Backend-Server erforderlich sein. Das bedeutet:
+– Deine Daten werden nicht verkauft
+– Deine Daten werden nicht an Dritte weitergegeben
+– Es werden keine Tracking- oder Analyse-Tools eingesetzt
+– Es findet keine Weitergabe zu Werbezwecken statt
 
-                <h2>2. Sicherheit</h2>
-                <p>Bitte triff bei Treffen mit Nutzern grundlegende Sicherheitsvorkehrungen wie:</p>
-                <ul>
-                    <li>öffentliche Orte wählen</li>
-                    <li>Personen informieren</li>
-                    <li>keine sensiblen Daten weitergeben</li>
-                </ul>
+Wofür werden die Daten benötigt?
+Die Daten werden ausschließlich für folgende Zwecke verwendet:
+– Darstellung deines Profils
+– Anzeige von Anzeigen auf der Karte und in Listen
+– Kommunikation mit anderen Nutzern (Chats)
+– Wiederherstellung deines Profils über deine E-Mail
+– Sicherheit und Missbrauchsvermeidung (z. B. zur Prüfung gemeldeter Inhalte)
 
-                <hr>
+Standortdaten
+Dein Standort wird nur im Zusammenhang mit einer Anzeige verwendet, um diese auf der Karte darzustellen.
+– Es erfolgt keine dauerhafte Standortverfolgung
+– Dein Standort wird nicht im Hintergrund erfasst
+– Du kannst statt deines aktuellen Standorts auch einen beliebigen Ort auswählen
 
-                <h2>3. Inhalte</h2>
-                <p>Verboten sind u.a.:</p>
-                <ul>
-                    <li>illegale Gegenstände</li>
-                    <li>gefährliche Produkte</li>
-                    <li>beleidigende oder diskriminierende Inhalte</li>
-                    <li>Spam & Fake-Profile</li>
-                </ul>
+Welche Rechte hast du?
+Du kannst jederzeit:
+– Dein Profil ändern
+– Dein Profil vollständig löschen
+– Anzeigen entfernen
+– Alle App-Daten durch Löschen der App entfernen
 
-                <hr>
+Bei der Profil-Löschung werden alle zugehörigen Daten unwiderruflich gelöscht, einschließlich:
+– Profilinformationen
+– Chats
+– Anzeigen
+– Bewertungspunkte (Needs & Sterne)
 
-                <h2>4. Daten</h2>
-                <p>Alle Daten werden <strong>nur lokal auf deinem Gerät gespeichert</strong>.</p>
+Kontakt
+Wenn du Fehler melden möchtest, findest du die Funktion unter Mehr → Fehler melden`,
+        termsBody: `Diese App dient ausschließlich dem privaten Austausch von Gegenständen zwischen Nutzern.
 
-                <hr>
+1. Verantwortung
+Du bist selbst vollständig verantwortlich für:
+– deine Angebote
+– deine Kommunikation
+– deine Übergaben
+– eventuelle Schäden oder Streitigkeiten
+Der App-Betreiber übernimmt keine Haftung.
 
-                <h2>5. Profil löschen</h2>
-                <p>Du kannst dein Profil jederzeit in der App löschen.</p>
+2. Sicherheit
+Bitte triff bei Treffen mit Nutzern grundlegende Sicherheitsvorkehrungen wie:
+– öffentliche Orte wählen
+– Personen informieren
+– keine sensiblen Daten weitergeben
 
-                <p>Vielen Dank, dass du iNeed nutzt!</p>
-            </div>
-        </div>
-    </div>
+3. Inhalte
+Verboten sind u.a.:
+– illegale Gegenstände
+– gefährliche Produkte
+– beleidigende oder diskriminierende Inhalte
+– Spam & Fake-Profile
 
-    <script>
-        // Funktion, die Seiten basierend auf dem URL-Hash umschaltet
-        function handleRouting() {
-            // Hole den aktuellen Hash (z.B. "#privacy") oder Standard "#home"
-            let hash = window.location.hash || '#home';
-            let pageId = hash.replace('#', '');
-            
-            // Prüfe, ob die ID überhaupt existiert
-            let targetPage = document.getElementById(pageId);
-            if (targetPage) {
-                // Alle Seiten ausblenden
-                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-                // Gewünschte Seite einblenden
-                targetPage.classList.add('active');
-                // Nach oben scrollen
-                window.scrollTo(0, 0);
-            }
-        }
+4. Daten
+Alle Daten werden nur lokal auf deinem Gerät gespeichert.
 
-        // Reagiere auf Änderungen der URL (z.B. wenn jemand den Zurück-Button klickt)
-        window.addEventListener('hashchange', handleRouting);
+5. Profil löschen
+Du kannst dein Profil jederzeit in der App löschen.
 
-        // Führe die Funktion direkt beim ersten Laden der Webseite aus
-        window.addEventListener('DOMContentLoaded', handleRouting);
-    </script>
+Vielen Dank, dass du iNeed nutzt!`,
+      },
+      en: {
+        back: '← Back',
+        contact: 'Contact',
+        privacyTitle: 'Privacy Policy',
+        termsTitle: 'Terms of Use',
+        privacyBody: `Welcome to iNeed. Protecting your data matters to us. This app only collects and stores the information strictly necessary to provide its features.
+
+What data is stored?
+The app stores exclusively:
+– Name (for your user profile)
+– Recovery email (in case you lose access to your profile)
+– Location data tied to listings (to show them on the map)
+– Profile picture (if you upload one)
+– Listings you create (title, description, images, category, chosen location)
+– Chats with other users
+
+Where is your data stored?
+Currently, data is processed within the app. Communication between users and displaying content may require an online transfer via our own backend server. This means:
+– Your data is never sold
+– Your data is never shared with third parties
+– No tracking or analytics tools are used
+– No data is shared for advertising purposes
+
+What is the data used for?
+Data is used exclusively for:
+– Displaying your profile
+– Showing listings on the map and in lists
+– Communication between users (chats)
+– Recovering your profile via your email
+– Security and abuse prevention (e.g. reviewing reported content)
+
+Location data
+Your location is only used in connection with a listing, to display it on the map.
+– There is no continuous location tracking
+– Your location is not collected in the background
+– You may choose any location instead of your current one
+
+What rights do you have?
+You can, at any time:
+– Edit your profile
+– Delete your profile completely
+– Remove listings
+– Remove all app data by deleting the app
+
+Deleting your profile permanently deletes all related data, including:
+– Profile information
+– Chats
+– Listings
+– Rating points (Needs & stars)
+
+Contact
+To report a bug, use the feature under More → Report a bug`,
+        termsBody: `This app is intended solely for the private exchange of items between users.
+
+1. Responsibility
+You are solely and fully responsible for:
+– your listings
+– your communication
+– your handovers
+– any damages or disputes
+The app operator assumes no liability.
+
+2. Safety
+Please take basic safety precautions when meeting other users, such as:
+– choosing public places
+– informing someone about the meeting
+– not sharing sensitive data
+
+3. Content
+Prohibited content includes, among others:
+– illegal items
+– dangerous products
+– offensive or discriminatory content
+– spam & fake profiles
+
+4. Data
+All data is stored only locally on your device.
+
+5. Deleting your profile
+You can delete your profile in the app at any time.
+
+Thank you for using iNeed!`,
+      },
+    };
+
+    function applyTranslations() {
+      const lang = (navigator.language || 'en').toLowerCase().startsWith('de') ? 'de' : 'en';
+      const t = TRANSLATIONS[lang];
+      document.querySelectorAll('[data-t]').forEach(el => {
+        const key = el.getAttribute('data-t');
+        if (t[key] != null) el.textContent = t[key];
+      });
+    }
+
+    function handleRouting() {
+      let hash = window.location.hash || '#home';
+      let pageId = hash.replace('#', '');
+      let targetPage = document.getElementById(pageId);
+      if (targetPage) {
+        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+        targetPage.classList.add('active');
+        window.scrollTo(0, 0);
+      }
+    }
+    window.addEventListener('hashchange', handleRouting);
+    window.addEventListener('DOMContentLoaded', () => { applyTranslations(); handleRouting(); });
+  </script>
 </body>
 </html>
