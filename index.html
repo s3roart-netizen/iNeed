@@ -26,10 +26,14 @@
   .logo { position: absolute; top: 24px; left: 24px; max-width: 110px; width: 100%; height: auto; display: block; }
   .slogan-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 60px; }
   .slogan { font-family: 'EB Garamond', var(--font-body); font-weight: 300; font-size: clamp(40px, 7vw, 84px); line-height: 1.15; max-width: 900px; margin: 0; color: var(--color-text); }
-  .info-container { max-width: 760px; margin: 0 auto; padding: 48px 24px; width: 100%; white-space: pre-line; }
+  .info-container { max-width: 760px; margin: 0 auto; padding: 48px 24px; width: 100%; }
   .back-btn { display: inline-block; margin-bottom: 28px; font-family: var(--font-heading); font-weight: 700; text-decoration: none; font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text); }
-  h1 { font-family: var(--font-heading); font-size: 28px; margin: 0 0 24px; border-bottom: 2px solid rgba(32,30,29,0.4); padding-bottom: 16px; white-space: normal; }
-  .info-body { font-size: 15px; line-height: 1.7; color: #444141; }
+  h1.support-title { font-family: var(--font-heading); font-size: 28px; margin: 0 0 8px; }
+  .support-body { font-size: 15px; line-height: 1.6; margin: 0 0 24px; }
+  .support-body a { font-weight: 700; text-decoration: none; }
+  h1.doc-title { font-family: var(--font-heading); font-size: 22px; margin: 0 0 24px; border-bottom: 2px solid rgba(32,30,29,0.4); padding-bottom: 16px; }
+  .terms-page h1.doc-title { font-size: 28px; }
+  .info-body { font-size: 15px; line-height: 1.7; color: #444141; white-space: pre-line; }
   footer { padding: 16px 24px; text-align: center; }
   .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
   .footer-contact { margin: 0; font-size: 11px; color: var(--color-neutral-700); }
@@ -61,15 +65,17 @@
   <div id="privacy" class="page">
     <div class="info-container">
       <a href="#home" class="back-btn" data-t="back">← Back</a>
-      <h1 data-t="privacyTitle">Privacy Policy</h1>
+      <h1 class="support-title" data-t="supportTitle">Support</h1>
+      <p class="support-body"><span data-t="supportBody">Questions, issues, or feedback about the iNeed app? Reach us at</span> <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+      <h1 class="doc-title" data-t="privacyTitle">Privacy Policy</h1>
       <div class="info-body" data-t="privacyBody"></div>
     </div>
   </div>
 
-  <div id="terms" class="page">
+  <div id="terms" class="page terms-page">
     <div class="info-container">
       <a href="#home" class="back-btn" data-t="back">← Back</a>
-      <h1 data-t="termsTitle">Terms of Use</h1>
+      <h1 class="doc-title" data-t="termsTitle">Terms of Use</h1>
       <div class="info-body" data-t="termsBody"></div>
     </div>
   </div>
@@ -79,6 +85,8 @@
       de: {
         back: '← Zurück',
         contact: 'Kontakt',
+        supportTitle: 'Support',
+        supportBody: 'Fragen, Probleme oder Feedback zur iNeed App? Schreib uns an',
         privacyTitle: 'Datenschutz',
         termsTitle: 'Nutzungsbedingungen',
         privacyBody: `Willkommen bei iNeed. Der Schutz deiner Daten ist uns besonders wichtig. Diese App sammelt und speichert nur die absolut notwendigen Informationen, um ihre Funktionen zu ermöglichen.
@@ -162,6 +170,8 @@ Vielen Dank, dass du iNeed nutzt!`,
       en: {
         back: '← Back',
         contact: 'Contact',
+        supportTitle: 'Support',
+        supportBody: 'Questions, issues, or feedback about the iNeed app? Reach us at',
         privacyTitle: 'Privacy Policy',
         termsTitle: 'Terms of Use',
         privacyBody: `Welcome to iNeed. Protecting your data matters to us. This app only collects and stores the information strictly necessary to provide its features.
