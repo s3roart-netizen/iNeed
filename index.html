@@ -55,8 +55,8 @@
       <div class="footer-inner">
         <p class="footer-contact"><span data-t="contact">Contact</span> <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
         <div class="footer-links">
-          <a href="#privacy" data-t="privacyTitle">Privacy Policy</a>
-          <a href="#terms" data-t="termsTitle">Terms of Use</a>
+          <a href="privacy.html" data-t="privacyTitle">Privacy Policy</a>
+          <a href="terms.html" data-t="termsTitle">Terms of Use</a>
         </div>
       </div>
     </footer>
@@ -266,6 +266,10 @@ Thank you for using iNeed!`,
     function handleRouting() {
       let hash = window.location.hash || '#home';
       let pageId = hash.replace('#', '');
+      // Die aktuelle Datenschutzerklärung liegt auf privacy.html; alte Links mit #privacy führen dorthin.
+      if (pageId === 'privacy') { window.location.replace('privacy.html'); return; }
+      // Ebenso liegen die aktuellen Nutzungsbedingungen auf terms.html.
+      if (pageId === 'terms') { window.location.replace('terms.html'); return; }
       let targetPage = document.getElementById(pageId);
       if (targetPage) {
         document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
