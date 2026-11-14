@@ -12,14 +12,21 @@
   nav a { margin-right: 1rem; }
   .site-logo { display: inline-block; margin-bottom: 12px; }
   .site-logo img { display: block; width: 84px; height: auto; }
+  .site-footer { margin-top: 3rem; border-top: 1px solid #8884; padding-top: 1.2rem; font-size: .9rem; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
+  .site-footer span { opacity: .6; }
+  /* Sprachauswahl: mit JavaScript ist nur die gewählte Sprache sichtbar, ohne bleiben alle untereinander sichtbar. */
+  html.js section[data-lang] { display: none; }
+  html.js section[data-lang].active { display: block; }
+  .lang-switch { margin: .5rem 0 1rem; }
+  .lang-switch a.current { font-weight: 700; text-decoration: none; }
 </style>
 </head>
 <body>
-<a class="site-logo" href="/" aria-label="Zur Startseite"><img src="ineed-logo.png" alt="iNeed"></a>
+<a class="site-logo" href="index.html" aria-label="Zur Startseite"><img src="ineed-logo.png" alt="iNeed"></a>
 <h1>iNeed – Datenschutzerklärung / Privacy Policy</h1>
-<nav><a href="#de">Deutsch</a><a href="#en">English</a><a href="terms.html">Nutzungsbedingungen / Terms</a><a href="impressum.html">Impressum</a><a href="delete-account.html">Konto löschen / Delete account</a></nav>
+<nav class="lang-switch"><a href="#de" data-lang-link="de">Deutsch</a> · <a href="#en" data-lang-link="en">English</a> · <a href="#ja" data-lang-link="ja">日本語</a> · <a href="#zh-Hans" data-lang-link="zh-Hans">简体中文</a> · <a href="#zh-Hant" data-lang-link="zh-Hant">繁體中文</a></nav>
 
-<section id="de" lang="de">
+<section id="de" lang="de" data-lang="de">
 <h2>Datenschutzerklärung</h2>
 <p>Stand: November 2026. Diese Erklärung gilt für die App „iNeed“ (Android: Entwicklername „iNeed Android“; iOS: „iNeed“).</p>
 
@@ -44,6 +51,7 @@
 <li><strong>Werbung:</strong> Die App zeigt Werbebanner über Google AdMob. Wenn du der App den Standortzugriff erlaubt hast, kann Google AdMob über das Werbe-SDK zusätzlich den ungefähren Standort deines Geräts erhalten, um Werbung regional passender auszuspielen. In der EU fragen wir deine Einwilligung über einen Einwilligungsdialog ab (Google User Messaging Platform).</li>
 <li><strong>Resend</strong>: Versand von E-Mails (Bestätigungs- und Passwort-Reset-Mails an dich sowie Meldungen an uns).</li>
 <li><strong>Apple</strong> (iOS): Push-Benachrichtigungen und Anmeldung mit Apple.</li>
+<li><strong>GitHub Pages</strong> (Hosting dieser Webseite): Die Webseite wird bei GitHub Inc. (USA) gehostet. Beim Aufruf verarbeitet GitHub technisch notwendige Verbindungsdaten, insbesondere deine IP-Adresse, Datum und Uhrzeit, die aufgerufene Seite und Browser-Informationen (Server-Logs), um die Seite auszuliefern und abzusichern. Wir setzen auf der Webseite keine Cookies, keine Analyse- und keine Tracking-Dienste ein; die von dir gewählte Sprache wird nur lokal in deinem Browser gespeichert. Rechtsgrundlage ist unser berechtigtes Interesse an einer sicheren und stabilen Bereitstellung der Webseite (Art. 6 Abs. 1 lit. f DSGVO). Dabei können Daten in die USA übermittelt werden; GitHub ist nach dem EU-US Data Privacy Framework zertifiziert und stützt Übermittlungen außerdem auf EU-Standardvertragsklauseln. Mehr dazu: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub General Privacy Statement</a>.</li>
 </ul>
 
 <h3>4. Rechtsgrundlagen</h3>
@@ -59,7 +67,7 @@
 <p>Die App darf nur von Personen ab 16 Jahren genutzt werden.</p>
 </section>
 
-<section id="en" lang="en">
+<section id="en" lang="en" data-lang="en">
 <h2>Privacy Policy</h2>
 <p>Last updated: November 2026. This policy applies to the app “iNeed” (Android: developer name “iNeed Android”; iOS: “iNeed”).</p>
 
@@ -84,6 +92,7 @@
 <li><strong>Advertising:</strong> the app shows banner ads through Google AdMob. If you have allowed the app to access your location, Google AdMob may additionally receive the approximate location of your device through its advertising SDK to show regionally more relevant ads. In the EU we ask for your consent through a consent dialog (Google User Messaging Platform).</li>
 <li><strong>Resend</strong>: sending emails (confirmation and password-reset emails to you, and reports to us).</li>
 <li><strong>Apple</strong> (iOS): push notifications and Sign in with Apple.</li>
+<li><strong>GitHub Pages</strong> (hosting of this website): The website is hosted by GitHub Inc. (USA). When you visit it, GitHub processes technically necessary connection data, in particular your IP address, date and time, the page requested and browser information (server logs), to deliver and secure the site. We do not use cookies, analytics or tracking on the website; the language you choose is stored only locally in your browser. Legal basis: our legitimate interest in providing the website securely and reliably (Art. 6(1)(f) GDPR). Data may be transferred to the USA; GitHub is certified under the EU–US Data Privacy Framework and also relies on EU standard contractual clauses. More information: <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub General Privacy Statement</a>.</li>
 </ul>
 
 <h3>4. Legal bases</h3>
@@ -98,5 +107,135 @@
 <h3>7. Age</h3>
 <p>The app may only be used by people aged 16 or older.</p>
 </section>
+<section id="ja" lang="ja" data-lang="ja">
+<h2>プライバシーポリシー</h2>
+<p>最終更新：2026年11月。本ポリシーは、アプリ「iNeed」（Android：開発者名「iNeed Android」、iOS：「iNeed」）に適用されます。</p>
+
+<h3>1. 管理者（責任者）</h3>
+<p>Serhat Yücel<br>Lauerstraße 64, 47198 Duisburg, ドイツ<br>メール：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+
+<h3>2. 処理するデータ</h3>
+<ul>
+<li><strong>アカウント：</strong>メールアドレスおよびログイン情報（プラットフォームに応じて、パスワードまたはAppleでサインイン）。</li>
+<li><strong>プロフィール：</strong>名前、任意のプロフィール画像、Needsポイント、評価、ブックマーク。</li>
+<li><strong>投稿：</strong>タイトル、説明、カテゴリ、画像、およびあなたが地図上で手動で選択した位置情報。</li>
+<li><strong>チャット：</strong>あなたが他のユーザーに送信するメッセージ。チャットで位置情報を共有した場合、その位置情報はメッセージの一部として保存され、チャットの参加者に送信されます。</li>
+<li><strong>通知：</strong>お使いのデバイスのプッシュトークン、および近くの通知に関する設定（あなたが設定したメインの位置情報と範囲を含みます）。</li>
+<li><strong>報告：</strong>コンテンツ、ユーザー、不具合を報告すると、報告内容のテキスト（任意で画像を添付）とあなたのユーザーIDがメールで当方に届きます。</li>
+<li><strong>デバイスの位置情報（Android）：</strong>あなたの許可がある場合、地図に現在地が表示されます。この目的のために位置情報はお使いのデバイス上で使用され、当方のサーバーには送信されません。</li>
+</ul>
+
+<h3>3. サービス提供事業者および受領者</h3>
+<ul>
+<li><strong>Supabase</strong>（データベース、ログイン、ファイル保存）：プロフィール、投稿、チャットのデータおよび画像はSupabaseに保存されます。</li>
+<li><strong>Google</strong>：Google Maps（地図表示）、Firebase Cloud Messaging（Androidでのプッシュ通知）、Google AdMob（広告）。その際、IPアドレスや広告IDなどのデバイス情報・利用情報がGoogleに送信されることがあります。</li>
+<li><strong>広告：</strong>本アプリはGoogle AdMobを通じてバナー広告を表示します。アプリに位置情報へのアクセスを許可している場合、地域に合った広告を表示するため、Google AdMobが広告SDKを通じてデバイスのおおよその位置情報を追加で受け取ることがあります。EUでは、同意ダイアログ（Google User Messaging Platform）を通じてあなたの同意を確認します。</li>
+<li><strong>Resend</strong>：メールの送信（あなた宛ての確認メールおよびパスワード再設定メール、ならびに当方宛ての報告）。</li>
+<li><strong>Apple</strong>（iOS）：プッシュ通知およびAppleでサインイン。</li>
+<li><strong>GitHub Pages</strong>（本ウェブサイトのホスティング）：本ウェブサイトは GitHub Inc.（米国）がホストしています。アクセスすると、GitHub はサイトを配信し保護するために必要な技術的接続データ（特にIPアドレス、日時、閲覧したページ、ブラウザ情報＝サーバーログ）を処理します。当ウェブサイトではCookie、アクセス解析、トラッキングを使用しません。選択した言語はお使いのブラウザ内にのみ保存されます。法的根拠は、ウェブサイトを安全かつ安定して提供するという当方の正当な利益です（GDPR第6条第1項(f)）。データが米国に送信される場合があります。GitHub は EU・米国データプライバシーフレームワークの認証を受けており、さらにEU標準契約条項にも基づいて送信を行います。詳細：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub General Privacy Statement</a>。</li>
+</ul>
+
+<h3>4. 法的根拠</h3>
+<p>アカウント、プロフィール、投稿、チャットについては契約の履行（GDPR第6条第1項(b)）、広告、位置情報へのアクセス、プッシュ通知については同意（同項(a)）、セキュリティおよび報告されたコンテンツの確認については正当な利益（同項(f)）が根拠となります。</p>
+
+<h3>5. 保存期間と削除</h3>
+<p>あなたのデータは、アカウントが存在する間保存されます。アカウントおよび関連するすべてのデータ（プロフィール、投稿、画像、チャット、評価、ブックマーク、プッシュトークン）は、アプリ内の「その他 → プロフィールを削除」（ドイツ語表記：「Mehr → Profil löschen」）からいつでも直接削除できます。また、メールで削除を依頼することもできます。詳しくは<a href="delete-account.html">アカウントの削除</a>をご覧ください。</p>
+
+<h3>6. あなたの権利</h3>
+<p>あなたには、アクセス権、訂正権、削除権、処理の制限を求める権利、データポータビリティの権利、異議を述べる権利があります。また、データ保護監督機関に苦情を申し立てることもできます。ご連絡は <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a> までお願いします。</p>
+
+<h3>7. 年齢</h3>
+<p>本アプリは16歳以上の方のみご利用いただけます。</p>
+</section>
+
+<section id="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">
+<h2>隐私政策</h2>
+<p>最后更新：2026年11月。本政策适用于应用“iNeed”（Android：开发者名称为“iNeed Android”；iOS：“iNeed”）。</p>
+
+<h3>1. 责任方</h3>
+<p>Serhat Yücel<br>Lauerstraße 64, 47198 Duisburg, 德国<br>电子邮件：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+
+<h3>2. 我们处理哪些数据</h3>
+<ul>
+<li><strong>账户：</strong>电子邮件地址和登录数据（根据平台不同，为密码或通过 Apple 登录）。</li>
+<li><strong>个人资料：</strong>姓名、可选的头像、Needs 积分、评价和收藏。</li>
+<li><strong>帖子：</strong>标题、描述、类别、图片，以及您在地图上手动选择的位置。</li>
+<li><strong>聊天：</strong>您发送给其他用户的消息。如果您在聊天中分享位置，该位置将作为消息的一部分被存储，并传送给聊天参与者。</li>
+<li><strong>通知：</strong>您设备的推送令牌，以及您对附近通知的设置，包括您设定的主要位置和范围。</li>
+<li><strong>举报：</strong>当您举报内容、用户或错误时，我们会通过电子邮件收到您的举报文字（可附带图片）和您的用户 ID。</li>
+<li><strong>设备位置（Android）：</strong>经您许可，地图会显示您的当前位置。该位置仅在您的设备上用于此目的，不会传输到我们的服务器。</li>
+</ul>
+
+<h3>3. 服务提供商和接收方</h3>
+<ul>
+<li><strong>Supabase</strong>（数据库、登录和文件存储）：个人资料、帖子和聊天数据以及图片存储在 Supabase。</li>
+<li><strong>Google</strong>：Google Maps（地图显示）、Firebase Cloud Messaging（Android 上的推送通知）和 Google AdMob（广告）。在此过程中，IP 地址、广告 ID 等设备和使用数据可能会传输给 Google。</li>
+<li><strong>广告：</strong>本应用通过 Google AdMob 展示横幅广告。如果您已允许本应用访问位置，Google AdMob 还可能通过其广告 SDK 获取您设备的大致位置，以便投放更符合所在地区的广告。在欧盟，我们会通过同意对话框（Google User Messaging Platform）征求您的同意。</li>
+<li><strong>Resend</strong>：发送电子邮件（发给您的确认邮件和密码重置邮件，以及发给我们的举报）。</li>
+<li><strong>Apple</strong>（iOS）：推送通知和通过 Apple 登录。</li>
+<li><strong>GitHub Pages</strong>（本网站托管）：本网站由 GitHub Inc.（美国）托管。访问时，GitHub 会处理为提供和保护网站所必需的技术性连接数据，尤其是您的 IP 地址、日期和时间、所访问的页面以及浏览器信息（服务器日志）。我们在网站上不使用 Cookie、分析或跟踪服务；您选择的语言仅保存在您浏览器本地。法律依据：我们安全、稳定地提供网站的正当利益（GDPR第6条第1款(f)项）。数据可能被传输至美国；GitHub 已通过欧美数据隐私框架认证，并同时依据欧盟标准合同条款进行传输。详情见：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub General Privacy Statement</a>。</li>
+</ul>
+
+<h3>4. 法律依据</h3>
+<p>履行合同（GDPR第6条第1款(b)项）：用于账户、个人资料、帖子和聊天；同意（(a)项）：用于广告、位置访问和推送通知；正当利益（(f)项）：用于安全以及对被举报内容的审查。</p>
+
+<h3>5. 存储期限和删除</h3>
+<p>只要您的账户存在，您的数据就会被保存。您可以随时直接在应用中通过“更多 → 删除个人资料”（德语界面为“Mehr → Profil löschen”）删除您的账户及所有相关数据（个人资料、帖子、图片、聊天、评价、收藏、推送令牌），也可以通过电子邮件申请删除，详见<a href="delete-account.html">删除账户</a>。</p>
+
+<h3>6. 您的权利</h3>
+<p>您享有访问权、更正权、删除权、限制处理权、数据可携权和反对权。此外，您还可以向数据保护监管机构投诉。请通过 <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a> 联系我们。</p>
+
+<h3>7. 年龄</h3>
+<p>仅限年满 16 周岁的人士使用本应用。</p>
+</section>
+
+<section id="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">
+<h2>隱私權政策</h2>
+<p>最後更新：2026年11月。本政策適用於應用程式「iNeed」（Android：開發者名稱「iNeed Android」；iOS：「iNeed」）。</p>
+
+<h3>1. 責任主體</h3>
+<p>Serhat Yücel<br>Lauerstraße 64, 47198 Duisburg, 德國<br>電子郵件：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+
+<h3>2. 我們處理哪些資料</h3>
+<ul>
+<li><strong>帳號：</strong>電子郵件地址與登入資料（依平台而定，為密碼或使用 Apple 登入）。</li>
+<li><strong>個人檔案：</strong>姓名、選擇性設定的大頭貼、Needs 點數、評價與書籤。</li>
+<li><strong>貼文：</strong>標題、說明、類別、圖片，以及您在地圖上手動選擇的位置。</li>
+<li><strong>聊天：</strong>您傳送給其他使用者的訊息。若您在聊天中分享位置，該位置會作為訊息的一部分儲存，並傳送給聊天參與者。</li>
+<li><strong>通知：</strong>您裝置的推播權杖（Push Token），以及您對附近通知的設定，包括您設定的主要位置與範圍。</li>
+<li><strong>檢舉：</strong>當您檢舉內容、使用者或錯誤時，我們會透過電子郵件收到您的檢舉內容（可選擇附上圖片）及您的使用者 ID。</li>
+<li><strong>裝置位置（Android）：</strong>經您允許後，地圖會顯示您目前的位置。該位置僅在您的裝置上用於此用途，不會傳送至我們的伺服器。</li>
+</ul>
+
+<h3>3. 服務供應商與接收者</h3>
+<ul>
+<li><strong>Supabase</strong>（資料庫、登入與檔案儲存）：個人檔案、貼文與聊天資料以及圖片皆儲存於 Supabase。</li>
+<li><strong>Google</strong>：Google Maps（地圖顯示）、Firebase Cloud Messaging（Android 上的推播通知）與 Google AdMob（廣告）。在此過程中，裝置與使用資料（例如 IP 位址與廣告 ID）可能會傳送給 Google。</li>
+<li><strong>廣告：</strong>本應用程式透過 Google AdMob 顯示橫幅廣告。若您已允許本應用程式存取位置，Google AdMob 可能會透過廣告 SDK 額外取得您裝置的大概位置，以投放更符合地區的廣告。在歐盟地區，我們會透過同意對話框（Google User Messaging Platform）徵求您的同意。</li>
+<li><strong>Resend</strong>：寄送電子郵件（寄給您的確認信與密碼重設信，以及寄給我們的檢舉內容）。</li>
+<li><strong>Apple</strong>（iOS）：推播通知與使用 Apple 登入。</li>
+<li><strong>GitHub Pages</strong>（本網站代管）：本網站由 GitHub Inc.（美國）代管。造訪時，GitHub 會處理為提供及保護網站所必需的技術性連線資料，特別是您的 IP 位址、日期與時間、所瀏覽的頁面及瀏覽器資訊（伺服器日誌）。我們在網站上不使用 Cookie、分析或追蹤服務；您選擇的語言僅儲存在您瀏覽器的本機。法律依據：我們安全、穩定地提供網站的正當利益（GDPR第6條第1項(f)款）。資料可能傳輸至美國；GitHub 已通過歐美資料隱私架構認證，並同時依據歐盟標準契約條款進行傳輸。詳情請見：<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">GitHub General Privacy Statement</a>。</li>
+</ul>
+
+<h3>4. 法律依據</h3>
+<p>帳號、個人檔案、貼文與聊天基於履行契約（GDPR第6條第1項(b)款）；廣告、位置存取與推播通知基於您的同意（(a)款）；安全性及對被檢舉內容的審查基於合法利益（(f)款）。</p>
+
+<h3>5. 保存期限與刪除</h3>
+<p>只要您的帳號存在，您的資料就會持續保存。您可以隨時直接在應用程式內透過「更多 → 刪除個人檔案」（德文：「Mehr → Profil löschen」）刪除您的帳號及所有相關資料（個人檔案、貼文、圖片、聊天、評價、書籤、推播權杖），或透過電子郵件申請刪除，請參閱<a href="delete-account.html">刪除帳號</a>。</p>
+
+<h3>6. 您的權利</h3>
+<p>您享有查閱權、更正權、刪除權、限制處理權、資料可攜權及反對權。此外，您也可以向資料保護主管機關提出申訴。請來信至 <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a> 與我們聯繫。</p>
+
+<h3>7. 年齡</h3>
+<p>本應用程式僅限年滿 16 歲者使用。</p>
+</section>
+
+<footer class="site-footer" data-current="privacy.html">
+  <a href="index.html">Start / Home</a>
+  <span aria-current="page">Datenschutz / Privacy</span>
+  <a href="terms.html">Nutzungsbedingungen / Terms</a>
+  <a href="impressum.html">Impressum / Legal notice</a>
+</footer>
+<script src="lang.js"></script>
 </body>
 </html>
