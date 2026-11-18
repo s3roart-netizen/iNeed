@@ -11,14 +11,21 @@
   nav a { margin-right: 1rem; }
   .site-logo { display: inline-block; margin-bottom: 12px; }
   .site-logo img { display: block; width: 84px; height: auto; }
+  .site-footer { margin-top: 3rem; border-top: 1px solid #8884; padding-top: 1.2rem; font-size: .9rem; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
+  .site-footer span { opacity: .6; }
+  /* Sprachauswahl: mit JavaScript ist nur die gewählte Sprache sichtbar, ohne bleiben alle untereinander sichtbar. */
+  html.js section[data-lang] { display: none; }
+  html.js section[data-lang].active { display: block; }
+  .lang-switch { margin: .5rem 0 1rem; }
+  .lang-switch a.current { font-weight: 700; text-decoration: none; }
 </style>
 </head>
 <body>
-<a class="site-logo" href="/" aria-label="Zur Startseite"><img src="ineed-logo.png" alt="iNeed"></a>
+<a class="site-logo" href="index.html" aria-label="Zur Startseite"><img src="ineed-logo.png" alt="iNeed"></a>
 <h1>iNeed – Impressum / Legal Notice</h1>
-<nav><a href="#de">Deutsch</a><a href="#en">English</a><a href="privacy.html">Datenschutz / Privacy</a><a href="terms.html">Nutzungsbedingungen / Terms</a></nav>
+<nav class="lang-switch"><a href="#de" data-lang-link="de">Deutsch</a> · <a href="#en" data-lang-link="en">English</a> · <a href="#ja" data-lang-link="ja">日本語</a> · <a href="#zh-Hans" data-lang-link="zh-Hans">简体中文</a> · <a href="#zh-Hant" data-lang-link="zh-Hant">繁體中文</a></nav>
 
-<section id="de" lang="de">
+<section id="de" lang="de" data-lang="de">
 <h2>Impressum</h2>
 <h3>Angaben gemäß § 5 DDG</h3>
 <p>Serhat Yücel<br>Lauerstraße 64<br>47198 Duisburg<br>Deutschland</p>
@@ -33,7 +40,7 @@
 <p>Nutzer können in der App eigene Inhalte veröffentlichen. Für diese Inhalte sind die jeweiligen Nutzer verantwortlich. Gemeldete rechtswidrige Inhalte entfernen wir, sobald wir davon Kenntnis erhalten. Meldungen bitte per E-Mail an die oben genannte Adresse oder direkt in der App.</p>
 </section>
 
-<section id="en" lang="en">
+<section id="en" lang="en" data-lang="en">
 <h2>Legal Notice</h2>
 <h3>Information pursuant to Section 5 DDG (Germany)</h3>
 <p>Serhat Yücel<br>Lauerstraße 64<br>47198 Duisburg<br>Germany</p>
@@ -47,5 +54,57 @@
 <h3>Liability for content</h3>
 <p>Users can publish their own content in the app and are responsible for it. We remove reported unlawful content as soon as we become aware of it. Please report it by email to the address above or directly in the app.</p>
 </section>
+<section id="ja" lang="ja" data-lang="ja">
+<h2>運営者情報（Impressum）</h2>
+<h3>§ 5 DDG（ドイツ）に基づく表示</h3>
+<p>Serhat Yücel<br>Lauerstraße 64<br>47198 Duisburg<br>ドイツ</p>
+
+<h3>お問い合わせ</h3>
+<p>メール: <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+
+<h3>消費者紛争解決</h3>
+<p>当方は、消費者仲裁機関による紛争解決手続きに参加する意思はなく、参加する義務もありません。</p>
+
+<h3>コンテンツに関する責任</h3>
+<p>ユーザーはアプリ内で独自のコンテンツを公開でき、そのコンテンツについては各ユーザーが責任を負います。報告された違法なコンテンツは、把握次第すみやかに削除します。報告は、上記のメールアドレス宛てにメールで、またはアプリ内から直接お寄せください。</p>
+</section>
+
+<section id="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">
+<h2>法律声明（Impressum）</h2>
+<h3>依据德国《数字服务法》（DDG）§ 5 提供的信息</h3>
+<p>Serhat Yücel<br>Lauerstraße 64<br>47198 Duisburg<br>德国</p>
+
+<h3>联系方式</h3>
+<p>电子邮件：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+
+<h3>消费者争议解决</h3>
+<p>我们不愿意也没有义务参与消费者仲裁机构的争议解决程序。</p>
+
+<h3>内容责任</h3>
+<p>用户可以在应用中发布自己的内容，并对这些内容负责。对于被举报的违法内容，我们一经知悉将立即删除。请通过电子邮件发送至上述地址，或直接在应用中举报。</p>
+</section>
+
+<section id="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">
+<h2>法律聲明（Impressum）</h2>
+<h3>依據德國數位服務法（DDG）§ 5 提供之資訊</h3>
+<p>Serhat Yücel<br>Lauerstraße 64<br>47198 Duisburg<br>德國</p>
+
+<h3>聯絡方式</h3>
+<p>電子郵件：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+
+<h3>消費者爭議解決</h3>
+<p>我們不願意，也無義務參與消費者仲裁機構的爭議解決程序。</p>
+
+<h3>內容責任</h3>
+<p>使用者可以在應用程式中發布自己的內容，並須對其內容負責。對於經檢舉的違法內容，我們一經得知便會立即移除。請透過電子郵件寄至上述地址，或直接在應用程式中檢舉。</p>
+</section>
+
+<footer class="site-footer" data-current="impressum.html">
+  <a href="index.html">Start / Home</a>
+  <a href="privacy.html">Datenschutz / Privacy</a>
+  <a href="terms.html">Nutzungsbedingungen / Terms</a>
+  <span aria-current="page">Impressum / Legal notice</span>
+</footer>
+<script src="lang.js"></script>
 </body>
 </html>

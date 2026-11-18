@@ -10,14 +10,21 @@
   h1 { font-size: 1.8rem; } h2 { margin-top: 2.5rem; border-top: 1px solid #8884; padding-top: 1.5rem; }
   .site-logo { display: inline-block; margin-bottom: 12px; }
   .site-logo img { display: block; width: 84px; height: auto; }
+  .site-footer { margin-top: 3rem; border-top: 1px solid #8884; padding-top: 1.2rem; font-size: .9rem; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
+  .site-footer span { opacity: .6; }
+  /* Sprachauswahl: mit JavaScript ist nur die gewählte Sprache sichtbar, ohne bleiben alle untereinander sichtbar. */
+  html.js section[data-lang] { display: none; }
+  html.js section[data-lang].active { display: block; }
+  .lang-switch { margin: .5rem 0 1rem; }
+  .lang-switch a.current { font-weight: 700; text-decoration: none; }
 </style>
 </head>
 <body>
-<a class="site-logo" href="/" aria-label="Zur Startseite"><img src="ineed-logo.png" alt="iNeed"></a>
+<a class="site-logo" href="index.html" aria-label="Zur Startseite"><img src="ineed-logo.png" alt="iNeed"></a>
 <h1>iNeed – Konto löschen / Delete account</h1>
-<nav><a href="#de">Deutsch</a> · <a href="#en">English</a> · <a href="privacy.html">Datenschutz / Privacy</a> · <a href="impressum.html">Impressum</a></nav>
+<nav class="lang-switch"><a href="#de" data-lang-link="de">Deutsch</a> · <a href="#en" data-lang-link="en">English</a> · <a href="#ja" data-lang-link="ja">日本語</a> · <a href="#zh-Hans" data-lang-link="zh-Hans">简体中文</a> · <a href="#zh-Hant" data-lang-link="zh-Hant">繁體中文</a></nav>
 
-<section id="de" lang="de">
+<section id="de" lang="de" data-lang="de">
 <h2>Konto und Daten löschen</h2>
 <p>Du kannst dein iNeed-Konto (Android-App „iNeed Android“ und iOS-App „iNeed“) auf zwei Wegen löschen.</p>
 <h3>Weg 1: direkt in der App</h3>
@@ -39,7 +46,7 @@
 <p>Die Löschung in der App erfolgt sofort. E-Mail-Anfragen bearbeiten wir innerhalb eines Monats.</p>
 </section>
 
-<section id="en" lang="en">
+<section id="en" lang="en" data-lang="en">
 <h2>Delete your account and data</h2>
 <p>You can delete your iNeed account (Android app “iNeed Android” and iOS app “iNeed”) in two ways.</p>
 <h3>Option 1: in the app</h3>
@@ -60,5 +67,78 @@
 <h3>Processing time</h3>
 <p>Deletion in the app happens immediately. We process email requests within one month.</p>
 </section>
+<section id="ja" lang="ja" data-lang="ja">
+<h2>アカウントとデータの削除</h2>
+<p>iNeed のアカウント（Android アプリ「iNeed Android」および iOS アプリ「iNeed」）は、次の2つの方法で削除できます。</p>
+<h3>方法1: アプリ内で削除</h3>
+<ol>
+<li>アプリを開いてログインします。</li>
+<li><strong>その他</strong>（Mehr）タブを開き、<strong>プロフィールを削除</strong>（Profil löschen）をタップします。</li>
+<li><strong>削除</strong>（Löschen）で確認します。アカウントとデータはただちに削除され、ログアウトされます。</li>
+</ol>
+<h3>方法2: メールで依頼</h3>
+<p>ログインできない場合や、アプリを削除してしまった場合は次の手順で依頼してください。</p>
+<ol>
+<li><a href="mailto:ineedtosavetheworld@gmail.com?subject=Account%20deletion">ineedtosavetheworld@gmail.com</a> 宛てに、件名「Account deletion」でメールを送信してください。</li>
+<li>登録時に使用したメールアドレスから送信し、プロフィール名を記載してください。</li>
+<li>アカウントを削除し、削除完了をメールでお知らせします。</li>
+</ol>
+<h3>削除されるデータ</h3>
+<p>プロフィール、画像を含む投稿、チャットとメッセージ、評価と Needs ポイント、ブックマーク、プッシュトークンが削除されます。</p>
+<h3>処理時間</h3>
+<p>アプリ内での削除はただちに完了します。メールでのご依頼は1か月以内に対応します。</p>
+</section>
+
+<section id="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">
+<h2>删除您的账户和数据</h2>
+<p>您可以通过两种方式删除您的 iNeed 账户（Android 应用“iNeed Android”和 iOS 应用“iNeed”）。</p>
+<h3>方式一：直接在应用中删除</h3>
+<ol>
+<li>打开应用并登录。</li>
+<li>进入<strong>更多</strong>（Mehr）标签页，点击<strong>删除个人资料</strong>（Profil löschen）。</li>
+<li>点击<strong>删除</strong>（Löschen）确认。您的账户和数据将被立即删除，并且您会被退出登录。</li>
+</ol>
+<h3>方式二：通过电子邮件</h3>
+<p>如果您无法再登录，或已不再拥有该应用：</p>
+<ol>
+<li>请发送电子邮件至 <a href="mailto:ineedtosavetheworld@gmail.com?subject=Account%20deletion">ineedtosavetheworld@gmail.com</a>，主题为“Account deletion”。</li>
+<li>请使用您注册时所用的电子邮件地址发送，并注明您的个人资料名称。</li>
+<li>我们会删除您的账户，并通过电子邮件向您确认删除。</li>
+</ol>
+<h3>将被删除的内容</h3>
+<p>您的个人资料、您的帖子（包括图片）、您的聊天和消息、您的评价和 Needs 积分、您的书签以及您的推送令牌。</p>
+<h3>处理时间</h3>
+<p>在应用中删除会立即生效。我们会在一个月内处理电子邮件请求。</p>
+</section>
+
+<section id="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">
+<h2>刪除帳號與資料</h2>
+<p>您可以透過兩種方式刪除您的 iNeed 帳號（Android 應用程式「iNeed Android」與 iOS 應用程式「iNeed」）。</p>
+<h3>方式一：直接在應用程式中</h3>
+<ol>
+<li>開啟應用程式並登入。</li>
+<li>前往<strong>更多</strong>（Mehr）分頁，並點選<strong>刪除個人檔案</strong>（Profil löschen）。</li>
+<li>點選<strong>刪除</strong>（Löschen）確認。您的帳號與資料將立即被刪除，並且您會被登出。</li>
+</ol>
+<h3>方式二：透過電子郵件</h3>
+<p>若您已無法登入，或已不再擁有此應用程式：</p>
+<ol>
+<li>請寄送電子郵件至 <a href="mailto:ineedtosavetheworld@gmail.com?subject=Account%20deletion">ineedtosavetheworld@gmail.com</a>，主旨請填寫「Account deletion」。</li>
+<li>請使用您註冊時所用的電子郵件地址寄出，並提供您的個人檔案名稱。</li>
+<li>我們會刪除您的帳號，並以電子郵件向您確認已完成刪除。</li>
+</ol>
+<h3>將被刪除的內容</h3>
+<p>您的個人檔案、您的貼文（含圖片）、您的聊天與訊息、您的評價與 Needs 點數、您的書籤，以及您的推播權杖。</p>
+<h3>處理時間</h3>
+<p>在應用程式中刪除會立即完成。電子郵件申請我們會在一個月內處理完畢。</p>
+</section>
+
+<footer class="site-footer" data-current="delete-account.html">
+  <a href="index.html">Start / Home</a>
+  <a href="privacy.html">Datenschutz / Privacy</a>
+  <a href="terms.html">Nutzungsbedingungen / Terms</a>
+  <a href="impressum.html">Impressum / Legal notice</a>
+</footer>
+<script src="lang.js"></script>
 </body>
 </html>

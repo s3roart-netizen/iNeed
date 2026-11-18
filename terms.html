@@ -12,14 +12,21 @@
   nav a { margin-right: 1rem; }
   .site-logo { display: inline-block; margin-bottom: 12px; }
   .site-logo img { display: block; width: 84px; height: auto; }
+  .site-footer { margin-top: 3rem; border-top: 1px solid #8884; padding-top: 1.2rem; font-size: .9rem; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
+  .site-footer span { opacity: .6; }
+  /* Sprachauswahl: mit JavaScript ist nur die gewählte Sprache sichtbar, ohne bleiben alle untereinander sichtbar. */
+  html.js section[data-lang] { display: none; }
+  html.js section[data-lang].active { display: block; }
+  .lang-switch { margin: .5rem 0 1rem; }
+  .lang-switch a.current { font-weight: 700; text-decoration: none; }
 </style>
 </head>
 <body>
-<a class="site-logo" href="/" aria-label="Zur Startseite"><img src="ineed-logo.png" alt="iNeed"></a>
+<a class="site-logo" href="index.html" aria-label="Zur Startseite"><img src="ineed-logo.png" alt="iNeed"></a>
 <h1>iNeed – Nutzungsbedingungen / Terms of Use</h1>
-<nav><a href="#de">Deutsch</a><a href="#en">English</a><a href="privacy.html">Datenschutz / Privacy</a><a href="impressum.html">Impressum</a><a href="delete-account.html">Konto löschen / Delete account</a></nav>
+<nav class="lang-switch"><a href="#de" data-lang-link="de">Deutsch</a> · <a href="#en" data-lang-link="en">English</a> · <a href="#ja" data-lang-link="ja">日本語</a> · <a href="#zh-Hans" data-lang-link="zh-Hans">简体中文</a> · <a href="#zh-Hant" data-lang-link="zh-Hant">繁體中文</a></nav>
 
-<section id="de" lang="de">
+<section id="de" lang="de" data-lang="de">
 <h2>Nutzungsbedingungen</h2>
 <p>Stand: November 2026. Diese Bedingungen gelten für die App „iNeed“ (Android und iOS).</p>
 
@@ -40,10 +47,12 @@
 <ul>
 <li>illegale oder gefährliche Gegenstände und Dienste,</li>
 <li>Beleidigungen, Belästigung, Hass, diskriminierende, gewaltverherrlichende oder sexuelle Inhalte,</li>
+<li>Inhalte, die Kinder sexuell darstellen, ausnutzen oder gefährden. Solche Inhalte entfernen wir sofort, sperren das Konto dauerhaft und melden sie den zuständigen Behörden,</li>
 <li>Spam, Betrug und falsche Profile,</li>
 <li>Inhalte, an denen du keine Rechte hast.</li>
 </ul>
 <p>Du kannst Anzeigen, Nachrichten, Gruppenchats und Nutzer in der App melden. Wir prüfen Meldungen und können Inhalte entfernen und Konten sperren, wenn gegen diese Bedingungen verstoßen wird.</p>
+<p><strong>Sperrung von Konten:</strong> Verstößt jemand gegen diese Bedingungen, können wir Inhalte entfernen und das Konto zeitweise oder dauerhaft sperren. Bei schweren Verstößen, etwa Inhalten, die Kinder gefährden, sperren wir sofort und ohne Vorwarnung. Wer gesperrt ist, sieht in der App den Grund und die Dauer der Sperre und kann sich nur noch abmelden. Gegen eine Sperre kannst du dich per E-Mail an <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a> wenden; wir prüfen sie und teilen dir das Ergebnis mit. Löschst du dein Konto, werden die Angaben zur Sperre mit gelöscht.</p>
 
 <h3>6. Deine Inhalte</h3>
 <p>Du behältst die Rechte an deinen Inhalten (Texte, Bilder, Videos). Mit dem Veröffentlichen erlaubst du uns, sie in der App für andere Nutzer anzuzeigen und auf unseren Servern zu speichern.</p>
@@ -61,7 +70,7 @@
 <p>Fragen und Meldungen: <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a>. Fehler kannst du in der App unter „Mehr → Fehler melden“ melden.</p>
 </section>
 
-<section id="en" lang="en">
+<section id="en" lang="en" data-lang="en">
 <h2>Terms of Use</h2>
 <p>Last updated: November 2026. These terms apply to the app “iNeed” (Android and iOS).</p>
 
@@ -82,10 +91,12 @@
 <ul>
 <li>illegal or dangerous items and services,</li>
 <li>insults, harassment, hate, discriminatory, violent or sexual content,</li>
+<li>content that sexually depicts, exploits or endangers children (we remove it immediately, ban the account permanently and report it to the competent authorities),</li>
 <li>spam, fraud and fake profiles,</li>
 <li>content you do not have the rights to.</li>
 </ul>
 <p>You can report listings, messages, group chats and users in the app. We review reports and may remove content and block accounts that violate these terms.</p>
+<p><strong>Blocking accounts:</strong> if someone violates these terms, we may remove content and block the account temporarily or permanently. In serious cases, for example content that endangers children, we block immediately and without warning. A blocked user sees the reason and duration of the block in the app and can only sign out. You can contest a block by email at <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a>; we review it and tell you the result. If you delete your account, the information about the block is deleted as well.</p>
 
 <h3>6. Your content</h3>
 <p>You keep the rights to your content (text, images, videos). By publishing it you allow us to show it to other users in the app and to store it on our servers.</p>
@@ -102,5 +113,144 @@
 <h3>10. Contact</h3>
 <p>Questions and reports: <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a>. You can report bugs in the app under “Mehr → Fehler melden” (More → Report a bug).</p>
 </section>
+<section id="ja" lang="ja" data-lang="ja">
+<h2>利用規約</h2>
+<p>最終更新：2026年11月。本規約は、アプリ「iNeed」(Android版およびiOS版)に適用されます。</p>
+
+<h3>1. 提供者</h3>
+<p>Serhat Yücel<br>Lauerstraße 64, 47198 Duisburg, ドイツ<br>メール：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+
+<h3>2. サービスの内容</h3>
+<p>iNeedは、近くにいる人同士をつなぎます。オファー、リクエスト、アクティビティを地図上に投稿したり、他のユーザーとチャットしたり、手助けや物品を個人間でやり取りしたりできます。当方は連絡の仲立ちをするだけです。契約、取り決め、物品の受け渡しは、すべてユーザー間でのみ成立します。</p>
+
+<h3>3. アカウントと年齢</h3>
+<p>ご利用にはアカウントが必要です。本アプリは16歳以上の方のみご利用いただけます。ログイン情報は他人に知られないよう管理し、正確な情報を入力してください。アカウントは、アプリの「その他 → プロフィールを削除」からいつでも削除できます。詳しくは<a href="delete-account.html">アカウントの削除</a>もご覧ください。</p>
+
+<h3>4. ユーザーの責任</h3>
+<p>投稿、メッセージ、待ち合わせや受け渡し、ならびに生じうる損害やトラブルについては、ユーザーご自身が責任を負います。待ち合わせの際は基本的な安全対策をとってください。人目のある場所を選び、信頼できる人に知らせ、機密性の高い情報は共有しないでください。</p>
+
+<h3>5. 禁止されるコンテンツ</h3>
+<p>特に次のものは禁止されています。</p>
+<ul>
+<li>違法または危険な物品・サービス、</li>
+<li>侮辱、嫌がらせ、憎悪、差別的・暴力を美化する・性的な内容、</li>
+<li>児童を性的に描写する、搾取する、または危険にさらすコンテンツ（直ちに削除し、アカウントを永久に停止し、管轄当局に通報します）、</li>
+<li>スパム、詐欺、なりすましのプロフィール、</li>
+<li>ご自身に権利のないコンテンツ。</li>
+</ul>
+<p>投稿、メッセージ、グループチャット、ユーザーは、アプリ内から報告できます。当方は報告内容を確認し、本規約に違反した場合には、コンテンツを削除したり、アカウントを停止したりすることがあります。</p>
+<p><strong>アカウントの停止：</strong>本規約に違反した場合、当方はコンテンツを削除し、アカウントを一時的または恒久的に停止することがあります。児童を危険にさらすコンテンツなど重大な違反の場合は、事前の警告なしに直ちに停止します。停止されたユーザーには、アプリ内で停止の理由と期間が表示され、ログアウトのみ可能です。停止に異議がある場合は、<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a> 宛にメールでご連絡ください。内容を確認のうえ、結果をお知らせします。アカウントを削除すると、停止に関する情報も削除されます。</p>
+
+<h3>6. ユーザーのコンテンツ</h3>
+<p>テキスト、画像、動画などのコンテンツの権利は、引き続きユーザーに帰属します。コンテンツを公開することで、当方がアプリ内で他のユーザーにそれを表示し、当方のサーバーに保存することを許諾したものとします。</p>
+
+<h3>7. 広告とデータ</h3>
+<p>本アプリでは、Google AdMobを通じて広告が表示されます。データは、<a href="privacy.html">プライバシーポリシー</a>に記載のとおり、サーバーに保存されます。</p>
+
+<h3>8. 提供状況と責任</h3>
+<p>当方は継続的に利用できるよう努めますが、これを保証するものではありません。故意または重過失による場合、ならびに生命・身体・健康の侵害の場合には、当方は無制限に責任を負います。それ以外の場合は、契約上の重要な義務に違反したときに限り、予見可能で通常想定される損害の範囲で責任を負います。他のユーザーの行為やコンテンツ、ならびに待ち合わせや物品の受け渡しについて、当方は責任を負いません。法律上の強行規定に基づく権利は影響を受けません。</p>
+
+<h3>9. 変更</h3>
+<p>当方は本規約を変更することがあります。最新版は、常にこのアドレスでご確認いただけます。</p>
+
+<h3>10. お問い合わせ</h3>
+<p>ご質問や報告：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a>。不具合は、アプリの「その他 → 不具合を報告」から報告できます。</p>
+</section>
+
+<section id="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">
+<h2>使用条款</h2>
+<p>最后更新：2026年11月。本条款适用于应用“iNeed”（Android 和 iOS 版）。</p>
+
+<h3>1. 服务提供方</h3>
+<p>Serhat Yücel<br>Lauerstraße 64, 47198 Duisburg, 德国<br>电子邮件：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+
+<h3>2. 服务内容</h3>
+<p>iNeed 将附近的人联系在一起。你可以在地图上发布服务、求助和活动，与其他用户聊天，并私下互相帮助或交换物品。我们仅提供联系渠道。合同、约定和物品交接仅在用户之间达成和进行。</p>
+
+<h3>3. 账户与年龄</h3>
+<p>使用本应用需要注册账户。仅年满 16 周岁的人士可以使用本应用。请妥善保管你的登录信息，并如实填写信息。你可以随时在应用中通过“更多 → 删除个人资料”删除你的账户，另请参见<a href="delete-account.html">删除账户</a>。</p>
+
+<h3>4. 你的责任</h3>
+<p>你需自行对你的服务、消息、见面和物品交接，以及可能产生的损害或纠纷负责。见面时请采取基本的安全措施：选择公共场所，告知一位你信任的人，并且不要透露敏感信息。</p>
+
+<h3>5. 禁止的内容</h3>
+<p>以下内容尤其不被允许：</p>
+<ul>
+<li>违法或危险的物品和服务，</li>
+<li>侮辱、骚扰、仇恨、歧视性、美化暴力或色情的内容，</li>
+<li>以性方式描绘、剥削或危害儿童的内容（我们会立即删除，永久封禁账户，并向主管机关举报），</li>
+<li>垃圾信息、欺诈和虚假个人资料，</li>
+<li>你无权使用的内容。</li>
+</ul>
+<p>你可以在应用中举报帖子、消息、群聊和用户。我们会审核举报；如有违反本条款的情况，我们可以删除相关内容并封禁账户。</p>
+<p><strong>封禁账户：</strong>如有违反本条款的情况，我们可以删除相关内容，并临时或永久封禁账户。对于严重违规（例如危害儿童的内容），我们会立即封禁，且不另行警告。被封禁的用户会在应用中看到封禁原因和期限，并且只能退出登录。你可以通过电子邮件向 <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a> 对封禁提出异议；我们会审核并告知你结果。如果你删除账户，有关封禁的信息也会一并删除。</p>
+
+<h3>6. 你的内容</h3>
+<p>你保留对自己内容（文字、图片、视频）的权利。发布内容即表示你允许我们在应用中向其他用户展示这些内容，并将其存储在我们的服务器上。</p>
+
+<h3>7. 广告与数据</h3>
+<p>本应用通过 Google AdMob 展示广告。你的数据按照<a href="privacy.html">隐私政策</a>中的说明存储在服务器上。</p>
+
+<h3>8. 可用性与责任</h3>
+<p>我们努力保证服务持续可用，但无法作出保证。对于故意和重大过失，以及对生命、身体或健康造成的损害，我们承担无限责任。除此之外，我们仅在违反主要合同义务时承担责任，且仅限于可预见的典型损害。对于其他用户的行为和内容，以及见面和物品交接，我们不承担任何责任。法律的强制性权利不受影响。</p>
+
+<h3>9. 变更</h3>
+<p>我们可能会修改本条款。最新版本始终可在此网址查看。</p>
+
+<h3>10. 联系方式</h3>
+<p>问题和举报：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a>。你可以在应用中通过“更多 → 报告错误”报告错误。</p>
+</section>
+
+<section id="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">
+<h2>使用條款</h2>
+<p>最後更新：2026年11月。本條款適用於應用程式「iNeed」(Android 與 iOS)。</p>
+
+<h3>1. 服務提供者</h3>
+<p>Serhat Yücel<br>Lauerstraße 64, 47198 Duisburg, 德國<br>電子郵件：<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a></p>
+
+<h3>2. 服務內容</h3>
+<p>iNeed 讓附近的人彼此連結。你可以在地圖上發布服務、需求與活動,與其他使用者聊天,並私下交換協助或物品。我們僅提供聯繫的管道。契約、約定與物品交接僅在使用者之間成立。</p>
+
+<h3>3. 帳號與年齡</h3>
+<p>使用本應用程式需要註冊帳號。僅限年滿 16 歲的人使用本應用程式。請妥善保管你的登入資料,並提供真實的資訊。你可以隨時在應用程式中透過「更多 → 刪除個人檔案」刪除你的帳號,另請參閱<a href="delete-account.html">刪除帳號</a>。</p>
+
+<h3>4. 你的責任</h3>
+<p>你須自行對你的服務、訊息、見面與物品交接,以及可能產生的損害或糾紛負責。見面時請採取基本的安全措施:選擇公共場所、告知你信任的人,並且不要透露敏感資料。</p>
+
+<h3>5. 禁止的內容</h3>
+<p>下列內容尤其禁止:</p>
+<ul>
+<li>違法或危險的物品與服務,</li>
+<li>侮辱、騷擾、仇恨、歧視、美化暴力或涉及性的內容,</li>
+<li>以性方式描繪、剝削或危害兒童的內容（我們會立即移除、永久停用帳號，並向主管機關檢舉）,</li>
+<li>垃圾訊息、詐騙與虛假的個人檔案,</li>
+<li>你不具備相關權利的內容。</li>
+</ul>
+<p>你可以在應用程式中檢舉貼文、訊息、群組聊天與使用者。我們會審查檢舉內容,若有違反本條款的情形,我們可以移除內容並停用帳號。</p>
+<p><strong>停用帳號：</strong>若有違反本條款的情形，我們可以移除內容，並暫時或永久停用帳號。對於嚴重違規（例如危害兒童的內容），我們會立即停用，且不另行警告。被停用的使用者會在應用程式中看到停用原因與期限，並且只能登出。你可以透過電子郵件向 <a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a> 對停用提出異議；我們會審查並告知你結果。若你刪除帳號，有關停用的資訊也會一併刪除。</p>
+
+<h3>6. 你的內容</h3>
+<p>你保有對你的內容(文字、圖片、影片)的權利。發布內容即表示你允許我們在應用程式中向其他使用者顯示這些內容,並將其儲存於我們的伺服器。</p>
+
+<h3>7. 廣告與資料</h3>
+<p>本應用程式透過 Google AdMob 顯示廣告。你的資料會儲存於伺服器,詳情請見<a href="privacy.html">隱私權政策</a>。</p>
+
+<h3>8. 服務可用性與責任</h3>
+<p>我們會盡力讓服務持續可用,但無法保證。對於故意或重大過失,以及對生命、身體或健康造成的傷害,我們負完全責任。除此之外,我們僅在違反重要契約義務時負責,且僅限於可預見的典型損害。對於其他使用者的行為與內容,以及見面與物品交接,我們不負任何責任。法律強制規定的權利不受影響。</p>
+
+<h3>9. 條款變更</h3>
+<p>我們可能會修改本條款。最新版本一律公布於此網址。</p>
+
+<h3>10. 聯絡方式</h3>
+<p>問題與檢舉請寄至:<a href="mailto:ineedtosavetheworld@gmail.com">ineedtosavetheworld@gmail.com</a>。你可以在應用程式中透過「更多 → 回報錯誤」回報錯誤。</p>
+</section>
+
+<footer class="site-footer" data-current="terms.html">
+  <a href="index.html">Start / Home</a>
+  <a href="privacy.html">Datenschutz / Privacy</a>
+  <span aria-current="page">Nutzungsbedingungen / Terms</span>
+  <a href="impressum.html">Impressum / Legal notice</a>
+</footer>
+<script src="lang.js"></script>
 </body>
 </html>

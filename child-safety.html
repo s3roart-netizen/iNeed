@@ -11,15 +11,20 @@
   .site-logo { display: inline-block; margin-bottom: 12px; }
   .site-logo img { display: block; width: 84px; height: auto; }
   .site-footer { margin-top: 3rem; border-top: 1px solid #8884; padding-top: 1.2rem; font-size: .9rem; display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; }
+  .site-footer span { opacity: .6; }
+  /* Sprachauswahl: mit JavaScript ist nur die gewählte Sprache sichtbar, ohne bleiben alle untereinander sichtbar. */
+  html.js section[data-lang] { display: none; }
+  html.js section[data-lang].active { display: block; }
   .lang-switch { margin: .5rem 0 1rem; }
+  .lang-switch a.current { font-weight: 700; text-decoration: none; }
 </style>
 </head>
 <body>
 <a class="site-logo" href="index.html" aria-label="Zur Startseite"><img src="ineed-logo.png" alt="iNeed"></a>
 <h1>iNeed – Kinderschutz / Child safety standards</h1>
-<nav class="lang-switch"><a href="#de">Deutsch</a> · <a href="#en">English</a></nav>
+<nav class="lang-switch"><a href="#de" data-lang-link="de">Deutsch</a> · <a href="#en" data-lang-link="en">English</a> · <a href="#ja" data-lang-link="ja">日本語</a> · <a href="#zh-Hans" data-lang-link="zh-Hans">简体中文</a> · <a href="#zh-Hant" data-lang-link="zh-Hant">繁體中文</a></nav>
 
-<section id="de" lang="de">
+<section id="de" lang="de" data-lang="de">
 <h2>Standards gegen sexuellen Missbrauch und sexuelle Ausbeutung von Kindern</h2>
 <p>iNeed ist eine Nachbarschafts-App (Android und iOS), in der Menschen Hilfe suchen, Hilfe anbieten und Aktivitäten planen. Der Schutz von Kindern hat für uns Vorrang. Diese Seite beschreibt unsere Standards gegen sexuellen Missbrauch und sexuelle Ausbeutung von Kindern (CSAE) und gegen Darstellungen sexuellen Kindesmissbrauchs (CSAM).</p>
 
@@ -55,7 +60,7 @@
 <p>Ansprechpartner für Fragen zum Kinderschutz und für Behörden:<br>Serhat Yücel<br>E-Mail: <a href="mailto:ineedtosavetheworld@gmail.com?subject=Kinderschutz">ineedtosavetheworld@gmail.com</a></p>
 </section>
 
-<section id="en" lang="en">
+<section id="en" lang="en" data-lang="en">
 <h2>Standards against child sexual abuse and exploitation</h2>
 <p>iNeed is a neighbourhood app (Android and iOS) in which people ask for help, offer help and plan activities. Protecting children is our priority. This page describes our standards against child sexual abuse and exploitation (CSAE) and against child sexual abuse material (CSAM).</p>
 
@@ -91,11 +96,120 @@
 <p>Contact person for child safety questions and for authorities:<br>Serhat Yücel<br>Email: <a href="mailto:ineedtosavetheworld@gmail.com?subject=Child%20safety">ineedtosavetheworld@gmail.com</a></p>
 </section>
 
-<footer class="site-footer">
+<section id="ja" lang="ja" data-lang="ja">
+<h2>児童に対する性的虐待および性的搾取に反対する基準</h2>
+<p>iNeed は、人々が助けを求めたり、助けを提供したり、アクティビティを企画したりする近所向けアプリ（Android および iOS）です。児童の保護は当方にとって最優先事項です。このページでは、児童に対する性的虐待および性的搾取（CSAE）ならびに児童性的虐待コンテンツ（CSAM）に反対する当方の基準を説明します。</p>
+
+<h3>ゼロ・トレランス</h3>
+<p>iNeed では、児童を性的に描写する、搾取する、または危険にさらすコンテンツや行為を一切容認しません。特に次のものが該当します。</p>
+<ul>
+<li>児童性的虐待コンテンツ（画像、動画、テキスト、音声メッセージ）</li>
+<li>未成年者の性的な描写</li>
+<li>性的な意図で未成年者に接触すること（グルーミング）、および性的行為やそのようなコンテンツの交換を求めること</li>
+<li>児童を性的に搾取する、またはそれを求める投稿や広告</li>
+</ul>
+<p>違反があった場合は、コンテンツを直ちに削除し、アカウントを永久に停止します。</p>
+
+<h3>年齢制限</h3>
+<p>iNeed は16歳以上のユーザーを対象としています。本アプリは児童向けではなく、児童に向けて宣伝されることもありません。</p>
+
+<h3>コンテンツとユーザーの報告</h3>
+<ul>
+<li>アプリ内では、すべてのユーザーが<strong>報告</strong>機能（「Melden」）から、投稿、メッセージ、プロフィールを報告できます。</li>
+<li>ユーザーはいつでも他のユーザーを<strong>ブロック</strong>できます。</li>
+<li>違反は、メールで直接報告することもできます：<a href="mailto:ineedtosavetheworld@gmail.com?subject=Child%20safety">ineedtosavetheworld@gmail.com</a>（件名「Child safety」）。</li>
+</ul>
+
+<h3>報告への対応</h3>
+<ul>
+<li>コンテンツは事前には確認されません。報告は当方が手作業で対応し、児童保護に関する報告を優先します。</li>
+<li>該当するコンテンツを遅滞なく削除し、責任のあるアカウントを停止します。停止されたユーザーは、アプリを利用できなくなります。</li>
+<li>児童性的虐待コンテンツまたはグルーミングの疑いがある場合は、管轄の捜査当局および通報窓口（ドイツでは、たとえば警察やインターネット苦情窓口（Internet-Beschwerdestelle）、必要に応じて NCMEC）に連絡し、法律上必要な範囲でデータを保全します。</li>
+<li>当方はそのようなコンテンツを再配布せず、報告者に提出を求めることもありません。該当するファイルは送らず、プロフィール名、投稿、日時をお知らせください。</li>
+</ul>
+
+<h3>お問い合わせ</h3>
+<p>児童保護に関するご質問および当局向けの連絡先：<br>Serhat Yücel<br>メール：<a href="mailto:ineedtosavetheworld@gmail.com?subject=Child%20safety">ineedtosavetheworld@gmail.com</a></p>
+</section>
+
+<section id="zh-Hans" lang="zh-Hans" data-lang="zh-Hans">
+<h2>反对儿童性虐待和性剥削的标准</h2>
+<p>iNeed 是一款邻里应用（Android 和 iOS），用户可以在其中寻求帮助、提供帮助和策划活动。保护儿童是我们的首要任务。本页说明我们反对儿童性虐待和性剥削（CSAE）以及儿童性虐待内容（CSAM）的标准。</p>
+
+<h3>零容忍</h3>
+<p>我们不容忍 iNeed 中任何以性方式描绘、剥削或危害儿童的内容或行为，尤其包括：</p>
+<ul>
+<li>儿童性虐待内容（图片、视频、文字、语音消息），</li>
+<li>对未成年人的性化描绘，</li>
+<li>出于性目的接近未成年人（诱骗），以及要求进行性行为或交换此类内容，</li>
+<li>对儿童进行性剥削或为此招揽的信息和帖子。</li>
+</ul>
+<p>违规行为将导致相关内容被立即删除，账户被永久封禁。</p>
+
+<h3>年龄限制</h3>
+<p>iNeed 面向 16 岁及以上的用户。本应用不是为儿童设计的，也不向儿童推广。</p>
+
+<h3>举报内容和用户</h3>
+<ul>
+<li>在应用中，每位用户都可以通过<strong>举报</strong>功能（“Melden”）举报帖子、消息和个人资料。</li>
+<li>用户可以随时<strong>屏蔽</strong>其他用户。</li>
+<li>你也可以直接通过电子邮件举报违规行为：<a href="mailto:ineedtosavetheworld@gmail.com?subject=Child%20safety">ineedtosavetheworld@gmail.com</a>（主题“Child safety”）。</li>
+</ul>
+
+<h3>我们如何处理举报</h3>
+<ul>
+<li>内容不会事先审核。举报由我们人工处理，涉及儿童安全的举报优先处理。</li>
+<li>我们会立即删除相关内容并封禁责任账户。被封禁的用户无法再使用本应用。</li>
+<li>如怀疑存在儿童性虐待内容或诱骗行为，我们会将该事项移交给主管的执法机关和举报机构（在德国例如警方和互联网投诉处 Internet-Beschwerdestelle，必要时还包括 NCMEC），并在法律要求的范围内保存数据。</li>
+<li>我们不会转发此类内容，也不会要求举报人提供。请不要向我们发送此类文件，而是告诉我们个人资料名称、帖子或时间。</li>
+</ul>
+
+<h3>联系方式</h3>
+<p>儿童安全问题及主管机关的联系人：<br>Serhat Yücel<br>电子邮件：<a href="mailto:ineedtosavetheworld@gmail.com?subject=Child%20safety">ineedtosavetheworld@gmail.com</a></p>
+</section>
+
+<section id="zh-Hant" lang="zh-Hant" data-lang="zh-Hant">
+<h2>反對兒童性虐待與性剝削的標準</h2>
+<p>iNeed 是一款鄰里應用程式（Android 與 iOS），使用者可在其中尋求協助、提供協助並規劃活動。保護兒童是我們的首要任務。本頁說明我們反對兒童性虐待與性剝削（CSAE）以及兒童性虐待內容（CSAM）的標準。</p>
+
+<h3>零容忍</h3>
+<p>我們不容忍 iNeed 中任何以性方式描繪、剝削或危害兒童的內容或行為，尤其包括：</p>
+<ul>
+<li>兒童性虐待內容（圖片、影片、文字、語音訊息），</li>
+<li>對未成年人的性化描繪，</li>
+<li>出於性目的接近未成年人（誘騙），以及要求進行性行為或交換此類內容，</li>
+<li>對兒童進行性剝削或為此招攬的資訊與貼文。</li>
+</ul>
+<p>違規行為將導致相關內容被立即移除，帳號被永久停用。</p>
+
+<h3>年齡限制</h3>
+<p>iNeed 適用於 16 歲以上的使用者。本應用程式並非為兒童設計，也不向兒童推廣。</p>
+
+<h3>檢舉內容與使用者</h3>
+<ul>
+<li>在應用程式中，每位使用者都可以透過<strong>檢舉</strong>功能（「Melden」）檢舉貼文、訊息與個人檔案。</li>
+<li>使用者可以隨時<strong>封鎖</strong>其他使用者。</li>
+<li>你也可以直接透過電子郵件檢舉違規行為：<a href="mailto:ineedtosavetheworld@gmail.com?subject=Child%20safety">ineedtosavetheworld@gmail.com</a>（主旨「Child safety」）。</li>
+</ul>
+
+<h3>我們如何處理檢舉</h3>
+<ul>
+<li>內容不會事先審查。檢舉由我們人工處理，涉及兒童安全的檢舉優先處理。</li>
+<li>我們會立即移除相關內容並停用責任帳號。被停用的使用者將無法再使用本應用程式。</li>
+<li>若懷疑有兒童性虐待內容或誘騙行為，我們會將該事項移交給主管的執法機關與檢舉機構（在德國例如警方與網路申訴處 Internet-Beschwerdestelle，必要時還包括 NCMEC），並在法律要求的範圍內保存資料。</li>
+<li>我們不會轉發此類內容，也不會要求檢舉者提供。請勿向我們傳送此類檔案，而是告訴我們個人檔案名稱、貼文或時間。</li>
+</ul>
+
+<h3>聯絡方式</h3>
+<p>兒童安全問題及主管機關的聯絡人：<br>Serhat Yücel<br>電子郵件：<a href="mailto:ineedtosavetheworld@gmail.com?subject=Child%20safety">ineedtosavetheworld@gmail.com</a></p>
+</section>
+
+<footer class="site-footer" data-current="child-safety.html">
   <a href="index.html">Start / Home</a>
   <a href="privacy.html">Datenschutz / Privacy</a>
   <a href="terms.html">Nutzungsbedingungen / Terms</a>
   <a href="impressum.html">Impressum / Legal notice</a>
 </footer>
+<script src="lang.js"></script>
 </body>
 </html>
