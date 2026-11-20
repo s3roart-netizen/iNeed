@@ -205,6 +205,9 @@
     });
   }
 
+  // Für Seiten, die Texte selbst durchschalten (zum Beispiel der Slogan auf der Startseite).
+  window.INeedI18n = { langs: CODES, text: function (key, lang) { return (STRINGS[key] || {})[lang] || ""; } };
+
   function init() { buildSwitch(); apply(detect(), false); }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
 })();

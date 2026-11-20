@@ -24,6 +24,10 @@
   .logo { position: absolute; top: 24px; left: 24px; max-width: 110px; width: 100%; height: auto; display: block; }
   .slogan-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-top: 60px; }
   .slogan { font-family: var(--font-body); font-weight: 700; letter-spacing: -0.02em; font-size: clamp(40px, 7vw, 84px); line-height: 1.15; max-width: 900px; margin: 0; color: var(--color-text); }
+  /* Feste Mindesthöhe, damit die Seite beim Sprachwechsel des Slogans nicht springt. */
+  .slogan { min-height: 3.5em; display: flex; align-items: center; justify-content: center; transition: opacity .45s ease, transform .45s ease; }
+  .slogan.fade { opacity: 0; transform: translateY(8px); }
+  @media (prefers-reduced-motion: reduce) { .slogan { transition: none; } .slogan.fade { transform: none; } }
   footer { padding: 16px 24px; text-align: center; }
   .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 6px; }
   .footer-contact { margin: 0; font-size: 11px; color: var(--color-neutral-700); }
@@ -59,6 +63,35 @@
   </div>
 
   <script src="lang.js"></script>
+  <script>
+    // Der Slogan wechselt alle 2 Sekunden die Sprache (mit sanftem Überblenden). Wer die Sprache unten wählt, dessen Auswahl
+    // gilt für die restliche Seite; der Slogan läuft ab dieser Sprache weiter. Bei "Bewegung reduzieren" bleibt er stehen.
+    (function () {
+      var el = document.querySelector(".slogan");
+      var still = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var idx = 0, timer = null, fadeTimer = null;
+      function langs() { return (window.INeedI18n && window.INeedI18n.langs) || []; }
+      function show(i) {
+        var l = langs()[i];
+        if (!l || !el) return;
+        el.classList.add("fade");
+        clearTimeout(fadeTimer);
+        fadeTimer = setTimeout(function () {
+          el.textContent = window.INeedI18n.text("slogan", l);
+          el.setAttribute("lang", l);
+          el.classList.remove("fade");
+        }, 450);
+      }
+      function start(from) {
+        clearInterval(timer);
+        idx = Math.max(0, langs().indexOf(from));
+        if (still || langs().length < 2) return;
+        timer = setInterval(function () { idx = (idx + 1) % langs().length; show(idx); }, 2000);
+      }
+      var previous = window.onINeedLang;
+      window.onINeedLang = function (lang) { if (previous) previous(lang); if (el) el.setAttribute("lang", lang); start(lang); };
+    })();
+  </script>
   <script>
     // Alte Adressen mit #privacy, #terms und #impressum führen zu den eigenen Seiten.
     (function () {
